@@ -1,0 +1,109 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,figure,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+/* background: transparent; */
+border: 0;
+margin: 0;
+outline: 0;
+padding: 0;
+vertical-align: baseline
+}
+
+body {
+background-color: rgba(255,255,255,0.65);
+color: rgba(0,0,0,1);
+font-size: 85%;
+font-family: Helvetica;
+margin-left: 15px;
+margin-right: 25%;
+}
+
+h1 {
+font-size: 1.8em;
+margin-bottom: 1px;
+margin-top: 15px;
+padding-top: 0;
+}
+
+h2 {
+font-size: 1.7em;
+margin-bottom: 1px;
+margin-top: 12px;
+padding-top: 0;
+}
+
+h3 {
+font-size: 1.6em;
+margin-bottom: 1px;
+margin-top: 12px;
+padding-top: 0;
+}
+
+h4 {
+font-size: 1.5em;
+margin-bottom: 1px;
+margin-top: 12px;
+padding-top: 0;
+}
+
+p {
+	/*font-size: 1.4em;*/
+	margin-bottom: 6px;
+}
+
+.section {
+padding: 20px 25px 20px 35px
+}
+
+.code-block {
+color: rgba(255,255,255,1);
+background-color: rgba(10,10,10,1);
+font-family: Menlo,monospace;
+display: block;
+/*unicode-bidi: embed;*/
+white-space: pre;
+margin: 5px 45px 5px 35px;
+padding: 0px 10px 15px;
+
+}
+
+/*inline code*/
+.code-voice {
+color: rgba(100,100,100,1);
+border: 1px solid rgba(138,175,199,0.8);
+background-color: rgba(241,241,241,1);
+font-family: Menlo,monospace;
+font-size: .9em;
+word-wrap: break-word;
+padding:0px 3px 0px;
+}
+
+.title {
+display: block;
+font-size: 1.5em;
+font-weight: bold;
+border-bottom: 1px solid black;
+margin-bottom: 2px;
+}
+
+.look-block {
+background-color: rgba(156,216,255,.9);
+border-left: 5px solid rgba(32,166,255,1);
+display: block;
+margin: 15px 45px 0px 35px;
+padding: 5px 10px 10px;
+}
+
+.fix-block {
+background-color: rgba(246,250,125,.9);
+border-left: 5px solid rgba(203,209,20,1);
+display: block;
+margin: 15px 45px 0px 35px;
+padding: 5px 10px 10px;
+}
+
+.write-block {
+background-color: rgba(192,233,186,.9);
+border-left: 5px solid rgba(66,202,49,1);
+display: block;
+margin: 15px 45px 0px 35px;
+padding: 5px 10px 10px;
+}
