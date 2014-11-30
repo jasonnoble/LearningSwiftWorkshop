@@ -1,6 +1,8 @@
 # Style Usage
 using `playground -s abh_playground.css *.md` the following css styles have been added.   usage is as follows.
 
+    <code class="code-voice">frankfurter leberkas</code>
+
     <div class="code-block">
       if let bacon in swine.belly {
         bacon.getInMyBelly()
