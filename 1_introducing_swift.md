@@ -1,8 +1,4 @@
-<!---
-https://github.com/jas/playground 
--->
-
-#Welcome
+# Introduction to Programming with Swift and Playgrounds
 
 how's this look?
 
