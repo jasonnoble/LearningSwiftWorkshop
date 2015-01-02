@@ -22,7 +22,7 @@ After this, uses of this highlighting is to aid in finding snippets to type in.
 For example, type <code class="code-voice">println("Hello World!")</code> bellow
 
 ### Live Code
-You'll notice the **live code** sections start at the far lefthave line numbers at the left, like this:
+You'll notice the **live code** sections start at the far left have line numbers at the left, like this:
 
 ```swift
 println("Howdy!  I've live code!")
@@ -83,8 +83,6 @@ Fixing broken code always feels good, and with Playgrounds you get instant feedb
 </div>
 
 ```swift
-
-
 
 
 ```

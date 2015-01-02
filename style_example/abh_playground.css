@@ -47,8 +47,9 @@ section > p {
 	padding-left: 10px;
 }
 
-section > ol, li {
+li {
 	list-style-position: inside;
+	margin-top: 6px;
 	margin-bottom: 6px;
 	padding-left: 10px;
 }
@@ -88,34 +89,28 @@ border-bottom: 1px solid black;
 margin-bottom: 2px;
 }
 
-.look-block {
-background-color: rgba(156,216,255,1);
-border-left: 5px solid rgba(32,166,255,1);
+.look-block,.fix-block,.write-block,.extra-block {
 display: block;
 margin: 15px 45px 0px 35px;
 padding: 5px 10px 10px;
+}
+
+.look-block {
+background-color: rgba(156,216,255,1);
+border-left: 5px solid rgba(32,166,255,1);
 }
 
 .fix-block {
 background-color: rgba(246,250,125,1);
 border-left: 5px solid rgba(203,209,20,1);
-display: block;
-margin: 15px 45px 0px 35px;
-padding: 5px 10px 10px;
 }
 
 .write-block {
 background-color: rgba(192,233,186,1);
 border-left: 5px solid rgba(66,202,49,1);
-display: block;
-margin: 15px 45px 0px 35px;
-padding: 5px 10px 10px;
 }
 
 .extra-block { 
 background-color: rgba(232,199,248,1);
 border-left: 5px solid rgba(177,50,236,1);
-display: block;
-margin: 15px 45px 0px 35px;
-padding: 5px 10px 10px;
 }
