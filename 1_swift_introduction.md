@@ -362,77 +362,316 @@ if airTemp < 32 {
 	println("Shorts time!")
 }
 
-var likeRed = true
+var doesLikeRed = true
 
-if likeRed == true {
+if doesLikeRed == true {
 	println("I like red!")
 }
 
-if likeRed {
+if doesLikeRed {
 	println("still like red!")
 }
 ```
 
-Note in the <code class="code-voice">likeRed</code> case above don't have to compare the variable to true.  The <code class="code-voice">== true</code> is always implied.  So looking farther back, you could write <code class="code-voice">if (airTemp < 32) == true</code> but that's just silly.
+Note in the <code class="code-voice">doesLikeRed</code> case above we don't have to compare the variable to true.  The <code class="code-voice">== true</code> is implied.  So looking farther back, you could write <code class="code-voice">if (airTemp < 32) == true</code> but that's just silly.
 
-If you have a <code class="code-voice">Bool</code> value, it can be used alone.
+If you have a <code class="code-voice">Bool</code> value, it can also be used alone.
+
+Also an if statement can be placed inside the clause of another statement.  We call this "nesting" if statements.
+
+<div class="code-block">
+if something == true {
+	if someOtherThing == true {
+		// I should end up here.
+	} else {
+		// not here
+	}
+} else {
+	// or here
+}
+</div>
+
+Be warry of too many nested if statements - they can make code very hard to read.
 
 <div class="fix-block">
 	<span class="title">Fix: Conditionals</span>
 	<p>Most of our earlier examples have been *syntax* errors.  With conditionals, we start seeing semantic errors appear.</p>
 	<p>Make sure this code runs AND does what we want.</p>
+	<p>Fix an example of a "nested" if statement.</p>
 </div>
 
 ```swift
 /** Fix 1
-
+var willPrintOut = false
+if willPrintOut {
+	println "make this print" 
+}
 END Fix 1 **/
 
 
 /** Fix 2
-
+var willNotPrint = false
+if willNotPrint != true {
+	println("don't print this. print nothing here.")
+}
 END Fix 2 **/
 
 
 /** Fix 3
-
+var valueOne = false
+var valueTwo = false
+if valueOne {
+	prinln("nope - don't print this")
+} else if valueTwo {
+	println("not me either")
+} else {
+	println("this should print")
+}
 END Fix 3 **/
+
+/** Fix 4
+var valueThree = false
+var valueFour = false
+if valueThree {
+	if( valueFour {
+		println("print this nested guy")
+	} else {
+		println("not this dude")
+	}
+} else {
+	println)"this is right out")
+}
+END Fix 4 **/
 
 ```
 
-more here
+A lot of programming is like the exercise above.  You read the code, you know what it *should do* - what code should run, what the code should do, but it doesn't.  Learning to patiently read code and process what it's doing (and what can go wrong) is a lot of what we do.
 
 <div class="write-block">
 	<span class="title">Write: </span>
-	<p>Learning what you learned above:</p>
+	<p>Learning what you learned above: Use if/then/else statements to tell me if I can drive home based on how much beer I've had, and how long I've waited.</p>
 	<ol>
-	<li></li>
-	<li></li>
+	<li>If I've had more than 3 beers: print "NO"</li>
+	<li>If fewer hours have passed than beers I had: print "NO" </li>
+	<li>Otherwise: print "YES"</li>
 	</ol>
 </div>
 
 ```swift
 
+var beerCount = 7
+var hoursSinceLastBeer = 2
+
+// write code here.
+// NOTE: when in doubt, don't code: call a cab
+
+
 ```
 
-more here
-
-
+Note in the above example that good names were choosen for variables.  Sure, you could use the variables wrong, but by choosing good names it makes our code more **readable** which is a good thing.
 
 ## Logical Operations
 
+Logical operators modify or combine the Boolean logic values true and false. Swift supports the three standard logical operators found in C-based languages:
+ * Logical NOT <code class="code-voice">!a</code>
+ * Logical AND <code class="code-voice">a && b</code>
+ * Logical OR  <code class="code-voice">a || b</code>
+
+### Logical NOT Operator
+
+A logical NOT <code class="code-voice">!a</code> operator *flips* the value of a Boolean to it's opposite: <code class="code-voice">true</code> becomes <code class="code-voice">false</code>, <code class="code-voice">false</code> becomes <code class="code-voice">true</code>. 
+
+An <code class="code-voice">!</code> appears directly in front of the value it's negating with no space. This is called a *prefix* operator.
+
+Consider the following snippet...
+
+<div class="code-block">
+var supportedFormat = true
+
+if !supportedFormat {
+	println("This is not a supported format")
+}
+</div>
+
+The above statement <code class="code-voice">!if supportedFormat</code> is read, "if not supportedFormat".  We should note that <code class="code-voice">!if supportedFormat</code> is the same as <code class="code-voice">supportedFormat == false</code>.
+ 
+Being careful naming boolean variables can help keep code consice.  Apple uses consistent, active words in a lot of their code. Variable names like <code class="code-voice">isActive</code>, class="code-voice">isReady</code>, class="code-voice">shouldDenyAccess</code> are pretty clear all on their own.
+
+### Logical AND Operator
+
+The logical AND operator <code class="code-voice">a && b</code> creates logical expressions where both values must be <code class="code-voice">true</code> for the overall expression to also be <code class="code-voice">true</code>.
+
+If either value is <code class="code-voice">false</code>, the overall expression will also be <code class="code-voice">false</code>. In fact, if the first value is <code class="code-voice">false</code>, the second value won’t even be evaluated, because it can’t possibly make the overall expression equate to <code class="code-voice">true</code>. This is known as *short-circuit evaluation*.
+
+In this example, both values must be true.
+
+<div class="code-block">
+var isReady = true
+var isSet = true
+
+if isReady && isSet {
+	println("Go!")
+} else {
+	println("You must be both ready and set before going")
+}
+</div>
+
+
+### Logical OR Operator
+
+The logical OR operator <code class="code-voice">a || b</code> creates logical expressions in which only one of the two values has to be <code class="code-voice">true</code> for the overall expression to be <code class="code-voice">true</code>.
+
+Like the Logical AND operator above, the Logical OR operator uses *short-circuit evaluation* to consider its expressions. If the left side of a Logical OR expression is <code class="code-voice">true</code>, the right side is not evaluated, because it cannot change the outcome of the overall expression.
+
+Here, one of the values is <code class="code-voice">true</code> so the expression evaluates to <code class="code-voice">true</code>.
+
+<div class="code-block">
+var hasTicket = false
+var hasBribeMoney = true
+
+if  hasTicket || hasBribeMoney {
+	println("Welcome to the movie")
+} else {
+	println("no go")
+}
+</div>
+
+The logical operations can also be combined.  Remember to make your code readable (parenthesis helps with this), but the following is valid.
+
+<div class="code-block">
+var knowsPassword = true
+
+var knowsMothersMaiden = false
+var knowsFirstStreet = false
+var knowsMascot = true
+
+if  knowsPassword && ( knowsMothersMaiden || knowsFirstStreet || knowsMascot ) {
+	println("seems legit")
+}
+
+// prints "seems legit"
+</div>
+
+
+<div class="look-block">
+	<span class="title">Look: Logical Operators</span>
+	<p></p>
+</div>
+
+```swift
+
+var isFreezing = true
+var isWearingScarf = true
+
+if isFreezing && wearingScarf {
+	// both true
+	println("good to go")
+} else if isFreezing {
+	// only isFreezing true
+	println("you need a scarf")
+} else if isWearingScarf {
+	// only isWearingScarf true
+	println("it's not that cold.  take off the scarf")
+} else {
+	// both false
+	println("also, good to go")
+}
+
+// there are a couple ways to skin this cat
+
+if isFreezing {
+	if isWearingScarf {
+		println("good to go")
+	} else {
+		println("you need a scarf")
+	}
+} else {
+	if isWearingScarf {
+		println("it's not that cold.  take off the scarf")
+	} else {
+		println("also, good to go")
+	}
+}
+
+// this one, is hard to read and confusing, but works
+
+if !isFreezing {
+	if !isWearingScarf {
+		println("also, good to go")
+	} else {
+		println("it's not that cold.  take off the scarf")
+	}
+} else {
+	if isWearingScarf {
+		println("good to go")
+	} else {
+		println("you need a scarf")
+	}
+}
+
+// the NOT ! operator is good for one off expressions
+if isFreezing && !isWearingScarf {
+	println("I bet you forgot your hat, too")
+}
+
+```
+
+Your *coding style* should be clean and easy to read.  Pick good names, and make your code *readable*.  It should read like a story:
+ * "If it's freezing and you have a scarf on: good to go"
+ * "If it's freezing and you don't have a scarf on: put on a scarf"
+ * "If it's not freezing and you don't have a scarf on: good to go"
+ * "If isFreezing and you're not wearing a scarf: take cheap jab about hat"
+
+
+<div class="fix-block">
+	<span class="title">Fix: Logical Operators </span>
+	<p>The software that provides instructions on keeping our machine running is looking a bit rough.</p>
+	<p>Without changing the println statements, fix the slew of errors below.</p>
+</div>
+
+```swift
+/**
+
+let currentTemp = 900
+let isRunning   = true
+var maxTemp     = 1200
+var minTemp     = 400
+
+if !isRunning {
+	if (currentTemp < maxTemp) && (currentTemp > minTemp) {
+		println("normal operating conditions")
+	} else if currentTemp !> minTemp {
+		println("running to cold.  remove water.")
+	} else {
+		println("runing too hot.  add water.")
+	}
+} else {
+	println("Call Maintenance!")
+}
+*/
+```
+
+<div class="write-block">
+	<span class="title">Write: Logical Operators</span>
+	<p>Learning what you learned above:</p>
+	<ol>
+	<li>We need to evaluate what someone has brought with them to the beach.  If they have forgetten something, we need to tell them.</li>
+	<li>Soon we will learn more elegant ways of solving problems like this, but it's worth seeing how just 3 parameters makes solving a problem with <code class="code-voice">if</code> statements require quite a lot of code.</li>
+	</ol>
+</div>
+
+```swift
+var hasTowel     = false          // NOTE: you should always know where your towel is
+var hasSunscreen = false
+var hasShades    = false
+
+// solve like in the isFreezing / wearingScarf LOOK example above
+
+
+```
+
+Since we're talking about readability, notice the grouping of our variables and use of of whitespace (litterally spaces) to line things up.  That's fine, Swift ignores extra whitespaces in code.
+
+
 ## Loops and Range Operators
-
-## Types and Conditionals
-is keyword
-
-## Strings
-String Interpolation
-countElements()
-.hasPrefix()
-.hasSuffix()
-
-Strong typing our code
-
-Nil coalescing operator
 
