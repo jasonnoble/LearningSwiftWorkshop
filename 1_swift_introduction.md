@@ -807,21 +807,27 @@ println("\(value)! is \(factor)")
 
 <div class="fix-block">
 	<span class="title">Fix: For-In Loops</span>
-	<p></p>
+	<p>Triange Man, Triangle Man....</p>
+	<p>We want to print a triange to the console, by specifying the number of rows.  The following has 4 rows.<p>
+		<div class="code-block">
+\*
+\*\*
+\*\*\*
+\*\*\*\*</div>
+	<p>We have only used the <code class="code-voice">println()</code> command so far.  The <code class="code-voice">print()</code> command is very similar, but it doesn't start a new line.  So <code class="code-voice">println()</code> prints a string to the console, then presses *return* (basically).  <code class="code-voice">print()</code> prints to the console, then DOES NOT press *return*.  Calling <code class="code-voice">println()</code> with no argument (with no string) is just like pressing *return*.</p>
 </div>
 
 ```swift
 /**
 
-var evenSum  = 0
-var oddSum   = 0
+var numberOfRows = 10
 
-for ii in 1..10 {
-	if ii % 2 == 0 {
-
-	} else {
-
-	}
+for ii in numberOfrows...1 {
+    var str = ""
+    for jj in 1..ii {
+        println("*")
+    }
+    println()
 }
 
 */
@@ -831,18 +837,27 @@ for ii in 1..10 {
 	<span class="title">Write: For-In Loops</span>
 	<p>Learning what you learned above:</p>
 	<ol>
-	<li></li>
-	<li></li>
+	<li>For a range, we want to add up the values of all the even numbers, and the values of all the odd numbers.</li>
+	<li>We use modulus <code class="code-voice">%</code> to determine if odd or not.  <code class="code-voice">4 % 2 == 0</code> and <code class="code-voice">5 % 2 == !</code>.</li>
+	<li>Remember *modulus* is the *remainder* after a divsion operation.  All even numbers divide by two evenly (with no remainder), odd numbers divided by two always have a remainder of one. </li>
 	</ol>
 </div>
 
 ```swift
+var evenSum         = 0
+var oddSum          = 0
+var startingNumber  = 1
+var endingNumber    = 10
 
+// write loop here
+
+evenSum
+oddSum
 ```
 
  ### For, While and Do While
 
-There are two more loops that we will skip for now, the <code class="code-voice">for</code>, <code class="code-voice">while</code> and <code class="code-voice">do while</code> loops.  For more information on these, check out  Apple's [Control Flow Swift Documentation](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html).
+There are two more loops that we will skip for now, the <code class="code-voice">for</code>, <code class="code-voice">while</code> and <code class="code-voice">do while</code> loops.  For more information on these, check out  Apple's [Control Flow Swift Documentation](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html).  Other Swift language features like Switch are outlined there as well.
 
 # End of Part 1!
 
