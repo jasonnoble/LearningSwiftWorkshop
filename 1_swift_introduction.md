@@ -559,11 +559,10 @@ if  knowsPassword && ( knowsMothersMaiden || knowsFirstStreet || knowsMascot ) {
 </div>
 
 ```swift
-
 var isFreezing = true
 var isWearingScarf = true
 
-if isFreezing && wearingScarf {
+if isFreezing && isWearingScarf {
 	// both true
 	println("good to go")
 } else if isFreezing {
@@ -670,8 +669,180 @@ var hasShades    = false
 
 ```
 
-Since we're talking about readability, notice the grouping of our variables and use of of whitespace (litterally spaces) to line things up.  That's fine, Swift ignores extra whitespaces in code.
+Since we're talking about readability, notice the grouping of our variables and use of of whitespace (litterally spaces) to line things up.  That's fine (great even) Swift ignores extra whitespaces in code.
 
 
 ## Loops and Range Operators
+
+We will end this first segment with a discussion of loops, or doing things more than once.
+
+We're skipping a little bit, but here is something cool called *String Interpolation*.  We've been using *Strings*, they are just characters wrapped in double-quotaion marks <code class="code-voice">"</code>.  String interpolation allows us to create strings by inserting or mixing expressions into our litteral text.  This is done with a backslash and parenetesis <code class="code-voice">\\(expression)</code>.
+
+Y'all are sharp, I bet you pick this up just from a few examples.
+
+```swift
+var anyNumberAtAll = 42
+println ("the value is \(anyNumberAtAll)")
+
+var iAmTrue = true
+println ("true is \(iAmTrue)")
+
+println ("math: 2 + 2 = \(2+2)")
+
+var firstNumber = 4
+var secondNumber = 2
+
+println("more math: \(firstNumber) + \(secondNumber) = \(firstNumber + secondNumber)")
+
+```
+
+ ### For-In
+
+The <code class="code-voice">for-in</code> loop itterates (or "goes over") a range of things.  For now, we'll look at a range of numbers.  
+
+<div class="code-block">
+for index in 1...4 {
+	println("\(index) squared is \(index * index)")
+}
+
+// 1 squared is 1
+// 2 squared is 4
+// 3 squared is 9
+// 4 squared is 16
+</div>
+
+Swift gives us a cool thing called the *closed range operator* <code class="code-voice">...</code> to itterate through a range of numbers, inclusive of both numbers.  So <code class="code-voice">1...3</code> will go 1, 2, 3. <code class="code-voice">4...5</code> will go 4, 5. 
+
+In this example <code class="code-voice">index</code> is set to the first value in the range (1), and the code between the curly braces <code class="code-voice">{ }</code> is executed.  Then <code class="code-voice">index</code> is set to the next value in the range (2), the code is executed again.  It **loops** like this until it gets to the end of the range (4).
+
+Index is a *constant* not a variable, you can not change it's value.  You can use variables to define the range as well.
+
+<div class="code-block">
+var start = 1
+var end   = 4
+for index in start...end {
+	println("\(index) squared is \(index * index)")
+}
+
+// 1 squared is 1
+// 2 squared is 4
+// 3 squared is 9
+// 4 squared is 16
+</div>
+
+This is pretty neat.  You can get each character of a string as well.
+
+<div class="code-block">
+for character in "howdy" {
+	println( character )
+}
+
+// h
+// o
+// w
+// d
+// y
+</div>
+
+When we learn about *Collections* we will see that for-in works for them as well (which is awesome).
+
+
+<div class="look-block">
+	<span class="title">Look: For-In Loops</span>
+	<p>Let's take a look at one of the examples we just used.</p>
+	<p>I always use <code class="code-voice">ii</code> as an itterator.</p>
+</div>
+
+```swift
+var start = 1
+var end   = 4
+for ii in start...end {
+	println("\(ii) squared is \(ii * ii)")
+}
+```
+
+<code class="code-voice">(4 times)</code> is strange output, huh?  Hover over <code class="code-voice">(4 times)</code> over there on the right.  There are *Quick View* (looks like an eyeball) and *Value History* (white circle with +) buttons.  Click *Value History* and behold the **Timeline** as it appears.  The Timeline gives us console output (at the top) and the ability to watch lines of code.
+
+Also open in the *Console Output* window.  This is the output of all the println() statements we've been making.  If you close this window, just change your code and it will re-open with fresh output.
+
+When we loop, we're printing more than one thing - so there isn't a way to show those lines of output in the gutter, where we've been looking.  In this case, when you click on *Value History* you're given a new window in the timeline that outputs the string for each time the loop executed, and the window is labeled with the line it's evaluating <code class="code-voice">println("\(index) squared is \(index * index)")</code>.
+
+Change the loop above, and watch the output in the Value History window change.  Maybe make it do different math.
+
+<div class="look-block">
+	<span class="title">Look A Little More: For-In Loops</span>
+	<p>Let's take a look at one of the examples we just used.</p>
+	<p>I always use <code class="code-voice">ii</code> as an itterator.</p>
+</div>
+
+
+You can put loops inside of loops, too.  This is called a **nested loop**.  Open a *Quick View* on <code class="code-voice">println("\(ii) * \(jj) = \(ii * ii)")</code> below, or just read it in the *Console Output*.
+
+```swift
+// markers can help, if you're watching the Console Output
+println("**********************")
+
+var outerMax  = 3
+var innerMax  = 4
+
+for ii in 1...outerMax {
+	for jj in 1...innerMax {
+		println("\(ii) * \(jj) = \(ii * ii)")
+	}
+}
+```
+
+The real power of loops is when you change something that's stays around when the loop is done.  Say we want to calculate a *factorial*, where the facotorial of 5 (5!) is 5 x 4 x 3 x 2 x 1.
+
+```swift
+var value   = 5
+var factor  = 1   // why do we start with 1?
+
+for ii in 1...value {
+	factor = factor * ii
+}
+
+println("\(value)! is \(factor)")
+```
+
+<div class="fix-block">
+	<span class="title">Fix: For-In Loops</span>
+	<p></p>
+</div>
+
+```swift
+/**
+
+var evenSum  = 0
+var oddSum   = 0
+
+for ii in 1..10 {
+	if ii % 2 == 0 {
+
+	} else {
+
+	}
+}
+
+*/
+```
+
+<div class="write-block">
+	<span class="title">Write: For-In Loops</span>
+	<p>Learning what you learned above:</p>
+	<ol>
+	<li></li>
+	<li></li>
+	</ol>
+</div>
+
+```swift
+
+```
+
+ ### For, While and Do While
+
+There are two more loops that we will skip for now, the <code class="code-voice">for</code>, <code class="code-voice">while</code> and <code class="code-voice">do while</code> loops.  For more information on these, check out  Apple's [Control Flow Swift Documentation](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html).
+
+# End of Part 1!
 
