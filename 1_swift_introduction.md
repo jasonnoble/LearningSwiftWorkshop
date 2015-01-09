@@ -23,7 +23,7 @@ Xcode is an *Interactive Development Environment* (IDE): a tool software develop
 
 *Programming language* : a complete set of rules (instructions) that one may write a computer program in.  We write code in a given programming language.
 
-*Object Oriented Programming* : a model of software development that breaks code into functional units, called objects;
+*Object Oriented Programming* : a model of software development that breaks code into functional units, called objects.
 
 *Compiler* : in Swift (and other languages), the compiler transforms the code you write, into something the computer can run.
 
@@ -44,7 +44,7 @@ Xcode is an *Interactive Development Environment* (IDE): a tool software develop
 ## Quick note on errors
 **Careful**: as we move through the exercises keep in mind that all the live-code sections of this document have all be syntactically correct or *none* of the code will run.
 
-# Let's Code!
+# Code!
 
 Enough talk, let's see what sorta trouble we've signed up for.
 
@@ -78,14 +78,20 @@ Every variable and constant is of a given **type**.  Swift automatically infers 
 
 There are lots and lots of types, and we will learn more about them later.
 
-### Breathe
-Just take a second - that was a lot to cover.  Go back and re-read what's above if you feel completely lost.
+<hr/>
+
+# Breathe
+Just take a second - that was a lot to cover.  
+
+It may be wise to go back and re-read what we've already covered.
+<hr/>
 
 Now we will see how these pieces make working code.
 
 <div class="look-block">
 	<span class="title">Look: Comments</span>
-	<p>Comments are parts of the source code that are ignored at runtime.  They exist for us lowly humans.</p>
+	<p>Comments are parts of the source code that are ignored by the compiler.</p>
+	<p>They exist for us lowly humans.</p>
 </div>
 
 ```swift
@@ -101,18 +107,18 @@ var radius = 25     // we'll say this radius is a variable
 
 <div class="fix-block">
 	<span class="title">Fix: Comments</span>
-	<p>Oh noes!  Not all of the below code should be commented out!  Fix the snippet so it's clear who the best is. </p>
-	<p>Be sure to hover your cursor over the red circles on the left.  These are the Error Codes Xcode is reporting.</p>
+	<p>Oh noes!  Not all of the below code should be commented out!</p>
+	<p>*Fix the snippet so it's clear who the best is.*</p>
+	<p>To complete this "Fix" exercise, delete <code class="code-voice">/\*\* FIX 1</code> and <code class="code-voice">\*/</code> to get started.</p>
 </div>
 
-```swift
-/* I'm gonna tell everyone who the best is!
-println("I'm the best")
-*/
 
-// uncomment this next line, to see what happens  (then comment it back)
-// pi = 22/7
-// why is this an error?
+
+```swift
+/** FIX 1
+println("Who's the best?")
+//prinln("I'm the best")
+*/
 ```
 
 NOTE: if you don't fix the above correctly, you may comment out the rest of the source!
@@ -120,8 +126,10 @@ NOTE: if you don't fix the above correctly, you may comment out the rest of the 
 <div class="write-block">
 	<span class="title">Write: Comments</span>
 	<p>Learning what you learned above:</p>
-	<ol><li>write some comments</li>
-	<li>print out <code class="code-voice">pi</code> and <code class="code-voice">radius</code>.</li></ol>
+	<ol>
+		<li>write some comments</li>
+		<li>print out <code class="code-voice">pi</code> and <code class="code-voice">radius</code>.</li>
+	</ol>
 </div>
 
 ```swift
@@ -188,7 +196,7 @@ Let's see how assignment and these mathematical operations work in code.
 
 <div class="look-block">
 	<span class="title">Look: Arithmetic Operations</span>
-	<p></p>
+	<p>With the Arithmetic Operations, we can only really look and play with math.</p>
 </div>
 
 ```swift
@@ -209,6 +217,9 @@ let constantMathy = mathy  // you can assign a variable to a constant (and vice 
 5 % 2
 // The above two lines tell us, "2 goes into 5: 2 times with remainder 1"
 
+4 % 2
+// The above line tells us, "4 is divisable by 2 with remainder 0"
+
 // Remember algebra and order of operations?
 1 + 1 * 4
 (1 + 1) * 4
@@ -221,7 +232,8 @@ For now, let's stick with integer values (numbers with no decimals).
 
 <div class="fix-block">
 	<span class="title">Fix: Arithmetic Operations</span>
-	<p>Here's a bunch of examples of things you can't do.  Uncomment these one at a time and see how they fail.</p>
+	<p>Here's a bunch of examples of things you can't do.</p>
+	<p>Uncomment these one at a time and see how they fail.</p>
 	<p>Don't forget to check the error codes before you "fix" each line!</p>
 </div>
 
@@ -285,7 +297,7 @@ if airTemp < 32 {
 }
 </div>
 
-Hmm.  That doesn't seem quite right.  Maybe <code class="code-voice">if / elseif</code> is the way to go.
+Hmmmmm.  That doesn't seem quite right.  Maybe <code class="code-voice">if / elseif</code> is the way to go.
 
 
 <div class="code-block">

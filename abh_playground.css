@@ -17,7 +17,7 @@ margin-right: 25%;
 }
 
 h1, h2, h3, h4 {
-color: rgba(115,115,115,1);
+color: rgba(85,85,85,1);
 font-family: Helvetica;
 font-weight: 100;
 font-size: 1.8em;
@@ -45,6 +45,7 @@ font-size: 1.1em;
 p {
 	margin-bottom: 10px;
 	padding-left: 10px;
+	padding-top: 10px;
 }
 
 li {
@@ -96,13 +97,13 @@ display: block;
 font-size: 1.5em;
 font-weight: bold;
 border-bottom: 1px solid black;
-margin-bottom: 2px;
+margin-bottom: 10px;
 }
 
 .look-block,.fix-block,.write-block,.extra-block {
 display: block;
 margin: 15px 45px 0px 35px;
-padding: 5px 10px 10px;
+padding: 5px 10px 5px;
 }
 
 .look-block {
