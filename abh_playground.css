@@ -92,6 +92,17 @@ word-wrap: break-word;
 padding:0px 3px 0px;
 }
 
+/*inline code*/
+.code-voice-bad {
+color: rgba(100,100,100,1);
+border: 1px solid rgba(255,0,0,0.8);
+background-color: rgba(241,42,42,1);
+font-family: Menlo,monospace;
+font-size: .9em;
+word-wrap: break-word;
+padding:0px 3px 0px;
+}
+
 .title {
 display: block;
 font-size: 1.5em;

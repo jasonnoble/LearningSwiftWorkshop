@@ -25,3 +25,9 @@ place to keep stuff that's cut
 *Debugging* : the act of removing errors from a computer program.
 
 *Statement* : a single piece of code.
+
+
+
+
+## Collections
+Swift provides two *collection* types: <code class="code-voice">Array</code> and <code class="code-voice"><Dictionary/code>.  

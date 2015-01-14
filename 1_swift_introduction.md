@@ -23,23 +23,15 @@ Xcode is an *Interactive Development Environment* (IDE): a tool software develop
 
 *Programming language* : a complete set of rules (instructions) that one may write a computer program in.  We write code in a given programming language.
 
-*Object Oriented Programming* : a model of software development that breaks code into functional units, called objects.
-
-*Compiler* : in Swift (and other languages), the compiler transforms the code you write, into something the computer can run.
-
 *Swift* : a programming language that allows you to write computer programs for iPhone, iPad and OSX machines.
 
 *Syntax* : the rules of how to write valid statements (code) in a given programming language.
-
-*Reserved Words* : words the syntax does not allow you to use.  In Swift <code class="code-voice">let</code>, <code class="code-voice">var</code>, <code class="code-voice">true</code>, <code class="code-voice">false</code> are all examples. 
 
 *Syntax error* : an misuse of the syntax, which is caught quickly by Xcode.  A Swift program with a syntax error will not compile and therefore will not run.
 
 *Semantic error* : code has correct syntax, but does the wrong thing (including crashing).
 
 *Debugging* : the act of removing errors from a computer program.
-
-*Statement* : a single piece of code.
 
 ## Quick note on errors
 **Careful**: as we move through the exercises keep in mind that all the live-code sections of this document have all be syntactically correct or *none* of the code will run.
@@ -111,7 +103,6 @@ var radius = 25     // we'll say this radius is a variable
 	<p>*Fix the snippet so it's clear who the best is.*</p>
 	<p>To complete this "Fix" exercise, delete <code class="code-voice">/\*\* FIX 1</code> and <code class="code-voice">\*/</code> to get started.</p>
 </div>
-
 
 
 ```swift
