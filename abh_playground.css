@@ -94,7 +94,7 @@ padding:0px 3px 0px;
 
 /*inline code*/
 .code-voice-bad {
-color: rgba(100,100,100,1);
+color: rgba(0,0,0,1);
 border: 1px solid rgba(255,0,0,0.8);
 background-color: rgba(241,42,42,1);
 font-family: Menlo,monospace;

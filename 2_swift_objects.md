@@ -1,9 +1,7 @@
 # Learning to program: Part 2
 
-
-
 ## Types
-Swift is a *strongly-typed* language, this means the compiler must know what *type* an variable or constant is.  We've been able to skip this, because Swift *implies* the type for you.  Code examples were choosen to avoid this problem while some basics were learned.
+Swift is a *strongly-typed* language, this means the compiler must know what *type* an variable or constant is.  We've been able to skip this, because Swift *implies* the type for you.  Code examples were chosen to avoid this problem while some basics were learned.
 
 All our examples in Part 1 were one of the four types below.
 
@@ -45,7 +43,7 @@ func addStrings(strOne:String, strTwo:String) -> String {
 	return strOne + strTwo;
 }
 
-addStrings("Hi ", "there!)   // calls addStrings, passing two String.  retuns "Hi there!"
+addStrings("Hi ", "there!)   // calls addStrings, passing two Strings  retuns "Hi there!"
 </div>
 
 
@@ -57,7 +55,7 @@ A *method* is a *function* that can be called on an object and is part of the cl
 A great starting point is the <code class="code-voice">String</code> class, because we can understand a string is a "string of characters" and the results are easy to see.  (String is actually a <code class="code-voice">struct</code>, but for today that's close enough to a <code class="code-voice">class</code> for us.)
 
 <div class="code-block">
-var str = "1234567890"
+var str = "1234567890"      // creates a new string object
 str.hasPrefix("123")        // returns true
 str.hasPrefix(" 1 2 3")     // returns false
 str.hasSuffix("890")        // returns true
@@ -101,8 +99,8 @@ var str = "favorite number is " + String(42)  // ok
 Casting may seem tricky, but computers do *exactly what we tell them* so when we say add a String and a number, for example, it isn't clear what your intention is.  Do you want the String converted to a number, and output a number?  Or maybe you want the number to become a String, and output a string.  In either case, if the compiler can't infer what's happening, you'll get a syntax error and have to fix it.
 
 <div class="look-block">
-	<span class="title">Look: </span>
-	<p></p>
+	<span class="title">Look #1: Types, Objects, Casting</span>
+	<p>Observe how these functions are written and called.</p>
 </div>
 
 ```swift
@@ -126,11 +124,16 @@ func greetPersonNamed(name:String, isMale:Bool) -> Void {
 greetPersonNamed("Brooks", true)
 greetPersonNamed("Mak", false)
 
+
+// we have to cast this Float to an Int
+// Delete the cast - what happens?  What's the error?
+var anInt:Int = 1 + Int(3.5)
+
 ```
 
 <div class="fix-block">
-	<span class="title">Fix: </span>
-	<p></p>
+	<span class="title">Fix #1: Types, Objects, Casting</span>
+	<p>Lots of ways *not* to do it here.  Fix it up, please.</p>
 </div>
 
 ```swift
@@ -158,15 +161,18 @@ var someInt:Int = 1 + 2.5
 ```
 
 <div class="write-block">
-	<span class="title">Write: </span>
+	<span class="title">Write #1: Types, Objects, Casting</span>
 	<p>Learning what you learned above:</p>
 	<ol>
-	<li></li>
-	<li></li>
+	<li>Write a function that takes a <code class="code-voice">Float</code> and <code class="code-voice">Int</code></li>
+	<li>Add the values together, and return as a <code class="code-voice">String</code></li>
 	</ol>
 </div>
 
 ```swift
+
+
+
 
 ```
 
@@ -197,11 +203,14 @@ This is pretty confusing, but the Swift compiler helps a lot with this.  As does
 Here are some examples so you can see what this looks like.
 
 <div class="code-block">
-var aFrame = CGRect(x: 0, y: 0, width: 300, height: 500)       // a frame is a rectangle on the screen
+// a frame is a rectangle on the screen
+var aFrame = CGRect(x: 0, y: 0, width: 300, height: 500)       
 
-var aView = UIView(frame:aFrame)                               // the 'aFrame' object from ^ is passed into this call
+// the 'aFrame' object from ^ is passed into this call
+var aView = UIView(frame:aFrame)                               
 
-var myCar = Car(make: "Nissan", model: "Xterra", year: 2004)   // creating a Car Object, which we will look at next
+// creating a Car Object, which we will look at next
+var myCar = Car(make: "Nissan", model: "Xterra", year: 2004)   
 </div>
 
 ## Creating and Using Objects
@@ -211,7 +220,7 @@ On your own, you can learn about creating your own objects.  Today, we just need
 
 For example, if you create a UIColor object, like so...
 ```swift
-			  // importing brings in objectes from a seperate library
+			  // importing brings in objects from a separate library
 import UIKit  // all the UI* classes are in the UIKit framework
 
 UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
@@ -224,7 +233,7 @@ properties, methods
 
 
 ### Constructors
-Constructors are special functions that create objects.  Objects create themselves, so we'd say, "the class implements the constuctor".  Just above, we called the <code class="code-voice">UIColor</code> constructor <code class="code-voice">UIColor(red:, green:, blue:, alpha:)</code>.  
+Constructors are special functions that create objects.  Objects create themselves, so we'd say, "the class implements the constructor".  Just above, we called the <code class="code-voice">UIColor</code> constructor <code class="code-voice">UIColor(red:, green:, blue:, alpha:)</code>.  
 Constructors take the form <code class="code-voice">ClassName()</code> where () may contain zero or more arguments.   Constructors help us by creating **good** objects.  They take the params they need, verify those are good values, and return a well configured object to use.  
 
 So let's create some things we can **see**.  Colors are cool, but there is even cooler stuff we can do.
@@ -249,33 +258,65 @@ If you can't see your Timeline, press **Option + Command + Enter**.
 
 
 <div class="look-block">
-	<span class="title">Look: </span>
-	<p></p>
+	<span class="title">Look #2: Named Params</span>
+	<p>Here we see three different ways to create the color red.</p>
+	<p>The first two use constructors, the last is not a constructor, but a function that returns an object.</p>
+	<p>Many objects (not all) can be tested for equality.  UIColor allows it, so we can see that all these methods create equatable objects.</p>
 </div>
 
 ```swift
+let red1 = UIColor(hue: 255.0, saturation: 25.0, brightness: 100.0, alpha: 1.0)
+let red2 = UIColor(red: 255.0, green: 0.0, blue: 0.0, alpha: 1.0)
+let red3 = UIColor.redColor()
+
+red1 == red2
+red2 == red3
+
+// Items drawn on the screen have a frame, which is a CGRect object
+// Once creating a CGRect with this constructor, we pull out this 
+// object's properties like so
+let rect = CGRect(x: 0, y: 0, width: 50, height: 50)
+rect.origin.x
+rect.origin.y
+rect.size.height
+rect.size.width
+
+// This is how we create a view
+let aView = UIView(frame:rect)
+aView.backgroundColor = red1     // (Quick Look!)
 
 ```
 
 <div class="fix-block">
-	<span class="title">Fix: </span>
-	<p></p>
+	<span class="title">Fix #2:  Named Params</span>
+	<p>Here are a bunch of examples of ways that won't create objects.</p>
+	<p>Fix each line up.</p>
+	<p>Try to get more comfortable with the Code Completion feature.</p>
 </div>
 
 ```swift
+//let brown = UIColor(red: 25, green: 25, blue: 25, alpha: 1.0)
 
+//var moreBrown = UIColor.brownColor
+
+//var gray = UIColor.greyColor()
+
+//let purple = UIColor(red: 150.0, green: 0.0, blue: 150.0)
 ```
 
 <div class="write-block">
-	<span class="title">Write: </span>
+	<span class="title">Write #2:  Named Params</span>
 	<p>Learning what you learned above:</p>
 	<ol>
-	<li></li>
-	<li></li>
+	<li>Draw a UIView that is at 0,0 and is 100 x 100 wide.  Set a background color.  (view1) </li>
+	<li>Draw another UIView that is at 10,10 and is 80 x 80 wide with a different background color. (view2)</li>
+	<li>Put view2 inside view1: <code class="code-voice">view1.addSubview(view2)</code></li>
 	</ol>
 </div>
 
 ```swift
+
+
 
 ```
 
@@ -305,7 +346,7 @@ let convertedNumber:Int? = someNumber.toInt()
 
 <code class="code-voice">convertedNumber</code> is an "optional int" written <code class="code-voice">Int?</code> in code.
 
-To extract the value of the optional, we must upwrap it.  
+To extract the value of the optional, we must unwrap it.  
 
 *It's a box.  We have to look in the box.*
 
@@ -345,7 +386,7 @@ if iAmNil != nil {
 }
 </div>
 
-Inside the <code class="code-voice">if</code> now we know *the box has something in it* but we *don't know what it is*.  <code class="code-voice">iAmNil</code> isn't a string, so we can not do this: <code class="code-voice-bad">println("\(iAmNil) is not nil")</code>.  That will work, but it will print out "Optional("not any more") is not nil".
+Inside the <code class="code-voice">if</code> now we know *the box has something in it* but we *don't know what it is*.  <code class="code-voice">iAmNil</code> isn't a string, so we can not do this: <code class="code-voice-bad">println("\\(iAmNil) is not nil")</code>.  That will work, but it will print out "Optional("not any more") is not nil".
 
 The <code class="code-voice">!</code> force unwraps a conditional.  Once you know the box has something in it, you can use the <code class="code-voice">!</code> to get the value out.
 
@@ -383,9 +424,11 @@ if let number = string.toInt(){
 }
 </div>
 
-Optional binding is a *syntantic sugar* - something that helps us write less code.
+Optional binding is a *syntactic sugar* - something that helps us write less code.
 
 Before we get to exercises, here's a little something fun for you.  (NOTE - this is very reckless usage of forced unwrapping.  You should check values of things like the response from a URL.  There are a million reasons that could fail.)
+
+** This was working the other day, but at last inspection it was not... **
 
 ```swift
 /*
@@ -398,29 +441,45 @@ let anotherView:UIImage? = UIImage(data: data!)
 ```
 
 <div class="look-block">
-	<span class="title">Look: </span>
-	<p></p>
+	<span class="title">Look #3: Optionals </span>
+	<p>Here we create a view, and check it's background color.</p>
+	<p>UIColor backgroundColor returns a <code class="code-voice">UIColor?</code></p>
+	<p>Notice once you set the color, you have to get it again. <code class="code-voice">backColor</code> doesn't update once <code class="code-voice">someView</code> has a color set.
 </div>
 
 ```swift
+let myFrame = CGRect(x: 0, y: 0, width: 50, height: 50)
+let someView:UIView = UIView(frame:myFrame)
 
+var backColor:UIColor? = someView.backgroundColor
+
+someView.backgroundColor = UIColor.redColor()
+
+backColor = someView.backgroundColor
 ```
 
 <div class="fix-block">
-	<span class="title">Fix: </span>
+	<span class="title">Fix #3: Optionals </span>
 	<p></p>
 </div>
 
 ```swift
+/** FIX 1
+var aString:String = "howdy!"
+aString = nil
+*/
+
+
 
 ```
 
 <div class="write-block">
-	<span class="title">Write: </span>
+	<span class="title">Write #3: Optionals </span>
 	<p>Learning what you learned above:</p>
 	<ol>
-	<li></li>
-	<li></li>
+	<li>Copy and paste your code from Write #1 and change the function name.</li>
+	<li>Update the method to return an Optional String.</li>
+	<li>Only return a value if both values are positive.</li>
 	</ol>
 </div>
 
@@ -428,20 +487,168 @@ let anotherView:UIImage? = UIImage(data: data!)
 
 ```
 
-# Extra stuff
-If you're working at your own pace, and are way ahead of the class, check the following resources out.
- * swift docs: https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language
- * cheat sheet: http://cdn1.raywenderlich.com/wp-content/uploads/2014/06/RW-Swift-Cheatsheet-0_5.pdf
- * http://www.raywenderlich.com/tutorials
- 	* http://www.raywenderlich.com/85528/user-accounts-ios-ruby-rails-swift
- 	* http://www.raywenderlich.com/81879/storyboards-tutorial-swift-part-1
- 	* http://www.raywenderlich.com/77974/making-a-gesture-driven-to-do-list-app-like-clear-in-swift-part-1
- 	* Something advanced: http://www.raywenderlich.com/85515/liquidfun-tutorial-1
-* swift tricks: http://realm.io/news/favorite-swift-tips-and-tricks-of-2014/
+## Arrays
+Swift provides two collection types, known as arrays and dictionaries, for storing collections of values. Arrays store ordered lists of values of the same type.  Arrays in Swift are always clear about (strongly typed to) the types of values and keys that they can store.
+
+You can create an array by setting it to an *array literal* with the following syntax.
+
+<div class="code-block">
+var kidsNames:[String] = ["Mak", "Addi"]
+</div>
+
+The <code class="code-voice">[String]</code> says "this is an Array that holds only strings".  <code class="code-voice">["Mak", "Addi"]</code> is the Array literal.
+
+If an Array is declared as a variable (as opposed to a constant) it is said to be *mutable* and you can change it.  You can see how many items are in the array with the <code class="code-voice">count</code> class.
+
+<div class="code-block">
+var kidsNames:[String] = ["Mak", "Addi"]
+kidsNames.count            // returns 2
+kidsNames.append("Pete")
+kidsNames.count            // returns 3
+kidsNames.append("Steve")
+kidsNames.count            // returns 4
+kidsNames                  // ["Mak", "Addi", "Pete", "Steve"]
+</div>
+
+If you want to traverse an entire array, our friend for-in can help:
+
+<div class="code-block">
+var kidsNames:[String] = ["Mak", "Addi"]
+for kid in kidsNames {
+	println("\(kid)")
+}
+</div>
+
+Rather than iterating over a range of numbers, we're iterating over the items in an Array.
+
+To get just one item out of an array, you use the <code class="code-voice">[]</code> operator.  This **subscript** operator always returns an **optional** of the type the array is storing.  Oh and strings are *zero indexed* which means the first character is accessed with <code class="code-voice">[0]</code> not <code class="code-voice">[1]</code>.
+
+<div class="code-block">
+var kidsNames:[String] = ["Mak", "Addi"]
+var firstKid:String? = kidsNames[0]
+if let kid = firstKid {
+	println("\(kid) was my first")
+}
+</div>
+
+
+## Bringing it all together
+This is the **last coding block**!  
+
+Exciting!
+
+<div class="look-block">
+	<span class="title">Look #4: </span>
+	<p>We finally have enough pieces to start building some really cool stuff!</p>
+	<p>Take your time and digest what's below.  Can you talk your way through it?</p>
+</div>
+
+```swift
+/** function returns an optional string */
+func baconWrap(item:String) -> String? {
+    if item == "pickles" {
+        return nil
+    }
+    
+    return "bacon-wrapped \(item)"
+}
+
+var items = ["scallop", "hot dog", "sausage", "bacon", "pickles"]
+var wrappableItems:[String] = [] /* empty array of strings */
+
+for item in items {
+    if let string = baconWrap(item) {  /* optional return */
+        wrappableItems.append(string)
+    } else {
+        println("guess you can't wrap \(item)")
+    }
+}
+
+println(wrappableItems)
+```
+
+
+
+<div class="fix-block">
+	<span class="title">Fix #4: </span>
+	<p>This is a similar example to what's above, but with lots of errors.</p>
+</div>
+
+```swift
+/**
+// This function is not HIPAA compliant.  
+// it doesn't work for "Dr" as an honorific
+func composeName(#a:String, #b:String) -> String {
+    if( a == "Dr" ){
+        return nil
+    }
+    return "\(b) \(a)"
+}
+
+var outterNames:[String] = [Mr, "Mrs", "Dr"]
+var innerNames:[String] = ["Boxer", "Smith", "Wheezelsnitz"]
+
+var composedNames:[String] = []
+
+for outter in outterNames {
+    for inner in innerNames {
+        if let name = composeName(a: outer, b inner) {
+            composedNames.append(name)
+        }
+    }
+
+
+printn(composedNames)
+*/
+```
+
+<div class="write-block">
+	<span class="title">Write #4: </span>
+	<p>Learning what you learned above:</p>
+	<ol>
+	<li>Write a function that takes a <code class="code-voice">String</code> and an <code class="code-voice">Int</code> and returns a <code class="code-voice">String?</code>.  It should only work for odd-numbered values</li>
+	<li>Print the <code class="code-voice">String</code> to the screen as many times as the <code class="code-voice">Int</code>.</li>
+	<li>Call <code class="code-voice">stringPrinter</code> in a for loop.  Keep track of how many times you've been through the loop.  Pass that value to <code class="code-voice">stringPrinter</code> as well.</li>
+	</ol>
+</div>
+
+```swift
+
+/*
+// this should take a String and an Int, returns String?
+// only works if the Int is odd
+func stringPrinter ....  {
+	....
+}
+
+
+var namesToCallWith:[String] = ....
+var count:Int = 0
+
+// loop through namesToCallWith
+	// track number of times in loop (count)
+	// call stringPrinter with name and count
+
+*/
+
+```
+
+# Done!
+
+If you made it this far, congratulations!  We moved at the speed of light, and you kept up.  Good show.
+
+Just so you know, we've skipped *so* many things here.  Just with Arrays, we didn't talk about removing items, adding at the front or middle, sorting, and many others.
+
+
+# Want more?
+ * The GuidedTour Playground that's with today's downloads
+ * (Apple's Swift Documents)[https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language]
+ * (A good Swift cheat sheet)[http://cdn1.raywenderlich.com/wp-content/uploads/2014/06/RW-Swift-Cheatsheet-0_5.pdf]
+ * (Ray Wenderlich tutorials)[http://www.raywenderlich.com]
+ 	* ()[http://www.raywenderlich.com/81879/storyboards-tutorial-swift-part-1]
+ 	* ()[http://www.raywenderlich.com/77974/making-a-gesture-driven-to-do-list-app-like-clear-in-swift-part-1]
+ * Even more advanced
+ 	* (RW Liquidfun Tutorial)[http://www.raywenderlich.com/85515/liquidfun-tutorial-1]
+ 	* (Swift tricks)[http://realm.io/news/favorite-swift-tips-and-tricks-of-2014/]
+ 	* (Rails + Swift)[http://www.raywenderlich.com/85528/user-accounts-ios-ruby-rails-swift]
  
-
-# Ideas
- * a more advanced stubbed in playground - bouncing view or something  (animation in view changed)
- * with the timer code
- * strip down part 1 to only what we need
-

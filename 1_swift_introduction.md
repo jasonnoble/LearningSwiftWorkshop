@@ -81,7 +81,7 @@ It may be wise to go back and re-read what we've already covered.
 Now we will see how these pieces make working code.
 
 <div class="look-block">
-	<span class="title">Look: Comments</span>
+	<span class="title">Look #1: Comments</span>
 	<p>Comments are parts of the source code that are ignored by the compiler.</p>
 	<p>They exist for us lowly humans.</p>
 </div>
@@ -91,14 +91,14 @@ Now we will see how these pieces make working code.
 
 /* So is this */
 
-println("This is possible"/* but a very, very bad idea*/);
+println("This is possible"/* but a very, very bad idea*/)
 
 let pi = 3.14159    // pi is a constant and never changes
 var radius = 25     // we'll say this radius is a variable
 ```
 
 <div class="fix-block">
-	<span class="title">Fix: Comments</span>
+	<span class="title">Fix #1: Comments</span>
 	<p>Oh noes!  Not all of the below code should be commented out!</p>
 	<p>*Fix the snippet so it's clear who the best is.*</p>
 	<p>To complete this "Fix" exercise, delete <code class="code-voice">/\*\* FIX 1</code> and <code class="code-voice">\*/</code> to get started.</p>
@@ -115,7 +115,7 @@ println("Who's the best?")
 NOTE: if you don't fix the above correctly, you may comment out the rest of the source!
 
 <div class="write-block">
-	<span class="title">Write: Comments</span>
+	<span class="title">Write #1: Comments</span>
 	<p>Learning what you learned above:</p>
 	<ol>
 		<li>write some comments</li>
@@ -132,9 +132,9 @@ NOTE: if you don't fix the above correctly, you may comment out the rest of the 
 
 # Basic Operations
 
-We've seen variables and constants, but haven't introduced anything you can *do* with them.  Also, we've seen <code class="code-voice">println()</code> and sorta figured out what that's done.
+We've seen variables and constants, but haven't introduced anything you can *do* with them.  Also, we've seen <code class="code-voice">println()</code> and sorta figured out what that does.
 
-An *operator* is a special symbol or phrase that you use to check, change, or combine values.  For example, the addition operator ( <code class="code-voice">+</code>) adds two numbers together (as in  <code class="code-voice">let i = 1 + 2</code>).
+An *operator* is a special symbol or phrase that you use to check, change, or combine values.  For example, the addition operator <code class="code-voice">+</code> adds two numbers together: <code class="code-voice">let i = 1 + 2</code>.
 
 ## Assignment and Arithmetic Operations
 <table>
@@ -186,7 +186,7 @@ An *operator* is a special symbol or phrase that you use to check, change, or co
 Let's see how assignment and these mathematical operations work in code.
 
 <div class="look-block">
-	<span class="title">Look: Arithmetic Operations</span>
+	<span class="title">Look #2: Arithmetic Operations</span>
 	<p>With the Arithmetic Operations, we can only really look and play with math.</p>
 </div>
 
@@ -217,12 +217,12 @@ let constantMathy = mathy  // you can assign a variable to a constant (and vice 
 
 ```
 
-You'll notice we're using only whole, integer values above.  We'll talk more about the different types of number types when we discuss *casting* later on.
+You'll notice we're using only whole, integer values above.  We'll talk more about the different types of number types when we discuss *types* and *casting* later on.
 
 For now, let's stick with integer values (numbers with no decimals).
 
 <div class="fix-block">
-	<span class="title">Fix: Arithmetic Operations</span>
+	<span class="title">Fix #2: Arithmetic Operations</span>
 	<p>Here's a bunch of examples of things you can't do.</p>
 	<p>Uncomment these one at a time and see how they fail.</p>
 	<p>Don't forget to check the error codes before you "fix" each line!</p>
@@ -243,12 +243,12 @@ For now, let's stick with integer values (numbers with no decimals).
 ```
 
 <div class="write-block">
-	<span class="title">Write: Arithmetic Operations</span>
+	<span class="title">Write #2: Arithmetic Operations</span>
 	<p>Do you ever miss word problems?  I thought you did!  Let's do some (and be sure to show your work).</p>
 	<p>Write code that outputs the answers for the below.</p>
 
 	<ol>
-	<li>You have 7 apples.  Suzie Q steals 3 Apples, and 1 is really a pear.  How many apples do you have?</li>
+	<li>You start with 7 apples.  Suzie Q steals 3 apples, and 1 is really a pear.  How many apples do you have?</li>
 	<li>If I watch 5 episodes of Judge Judy every day, how many episodes would I see in 4 weeks?</li>
 	<li>Your 1974 Camero gets 12 miles to the gallon.  If gas costs $2.14 a gallon, how much will gas cost for a 386 mile trip?</li>
 	</ol>
@@ -301,7 +301,7 @@ if airTemp < 32 {
 }
 </div>
 
-The **comparisons** above are what makes this possible.  The comparisons are <code class="code-voice">airTemp < 32</code> and <code class="code-voice">airTemp < 60</code>.  Each returns <code class="code-voice">true</code> or <code class="code-voice">false</code> which what we call **booleans**.
+The **comparisons** above are what makes this possible.  The comparisons are <code class="code-voice">airTemp < 32</code> and <code class="code-voice">airTemp < 60</code>.  Each returns <code class="code-voice">true</code> or <code class="code-voice">false</code> the two possible values of the **boolean** data type.
 
 These are all the comparison operators and each returns a <code class="code-voice">Bool</code> value.
 
@@ -345,10 +345,10 @@ These are all the comparison operators and each returns a <code class="code-voic
 	</tr>
 </table>
 
-Remember: each part of the <code class="code-voice">if</code> statement must evaluate to either <code class="code-voice">true</code> or <code class="code-voice">false</code>.  
+Remember: each clause in an <code class="code-voice">if/else if</code> statement must evaluate to either <code class="code-voice">true</code> or <code class="code-voice">false</code>.
 
 <div class="look-block">
-	<span class="title">Look: Conditionals</span>
+	<span class="title">Look #3: Conditionals</span>
 	<p>Maybe we can do a little more than look this time...</p>
 	<p>What happens if you change the airTemp on the first line to 25?  or 50?</p>
 	<p>Try setting the airTemp to 32, then getting it to tell you to wear a coat.</p>
@@ -372,7 +372,7 @@ if doesLikeRed == true {
 }
 
 if doesLikeRed {
-	println("still like red!")
+	println("I still like red!")
 }
 ```
 
@@ -380,7 +380,7 @@ Note in the <code class="code-voice">doesLikeRed</code> case above we don't have
 
 If you have a <code class="code-voice">Bool</code> value, it can also be used alone.
 
-Also an if statement can be placed inside the clause of another statement.  We call this "nesting" if statements.
+Also an <code class="code-voice">if</code> statement can be placed inside the clause of another statement.  We call this "nesting" if statements.
 
 <div class="code-block">
 if something == true {
@@ -397,7 +397,7 @@ if something == true {
 Be warry of too many nested if statements - they can make code very hard to read.
 
 <div class="fix-block">
-	<span class="title">Fix: Conditionals</span>
+	<span class="title">Fix #3: Conditionals</span>
 	<p>Most of our earlier examples have been *syntax* errors.  With conditionals, we start seeing semantic errors appear.</p>
 	<p>Make sure this code runs AND does what we want.</p>
 	<p>Fix an example of a "nested" if statement.</p>
@@ -451,7 +451,7 @@ END Fix 4 **/
 A lot of programming is like the exercise above.  You read the code, you know what it *should do* - what code should run, what the code should do, but it doesn't.  Learning to patiently read code and process what it's doing (and what can go wrong) is a lot of what we do.
 
 <div class="write-block">
-	<span class="title">Write: </span>
+	<span class="title">Write #3: </span>
 	<p>Learning what you learned above: Use if/then/else statements to tell me if I can drive home based on how much beer I've had, and how long I've waited.</p>
 	<ol>
 	<li>If I've had more than 3 beers: print "NO"</li>
@@ -557,8 +557,9 @@ if  knowsPassword && ( knowsMothersMaiden || knowsFirstStreet || knowsMascot ) {
 
 
 <div class="look-block">
-	<span class="title">Look: Logical Operators</span>
-	<p></p>
+	<span class="title">Look #4: Logical Operators</span>
+	<p>There are lots of ways to do the same thing.</p>
+	<p>Look and play with these - which are the most clean to your eye?</p>
 </div>
 
 ```swift
@@ -626,7 +627,7 @@ Your *coding style* should be clean and easy to read.  Pick good names, and make
 
 
 <div class="fix-block">
-	<span class="title">Fix: Logical Operators </span>
+	<span class="title">Fix #4: Logical Operators </span>
 	<p>The software that provides instructions on keeping our machine running is looking a bit rough.</p>
 	<p>Without changing the println statements, fix the slew of errors below.</p>
 </div>
@@ -654,7 +655,7 @@ if !isRunning {
 ```
 
 <div class="write-block">
-	<span class="title">Write: Logical Operators</span>
+	<span class="title">Write #4: Logical Operators</span>
 	<p>Learning what you learned above:</p>
 	<ol>
 	<li>We need to evaluate what someone has brought with them to the beach.  If they have forgetten something, we need to tell them.</li>
@@ -773,7 +774,7 @@ When we loop, we're printing more than one thing - so there isn't a way to show 
 Change the loop above, and watch the output in the Value History window change.  Maybe make it do different math.
 
 <div class="look-block">
-	<span class="title">Look A Little More: For-In Loops</span>
+	<span class="title">Look A Little More #5: For-In Loops</span>
 	<p>Let's take a look at one of the examples we just used.</p>
 	<p>I always use <code class="code-voice">ii</code> as an itterator.</p>
 </div>
@@ -809,7 +810,7 @@ println("\(value)! is \(factor)")
 ```
 
 <div class="fix-block">
-	<span class="title">Fix: For-In Loops</span>
+	<span class="title">Fix #5: For-In Loops</span>
 	<p>Triange Man, Triangle Man....</p>
 	<p>We want to print a triange to the console, by specifying the number of rows.  The following has 4 rows.<p>
 		<div class="code-block">
@@ -837,7 +838,7 @@ for ii in numberOfrows...1 {
 ```
 
 <div class="write-block">
-	<span class="title">Write: For-In Loops</span>
+	<span class="title">Write #5: For-In Loops</span>
 	<p>Learning what you learned above:</p>
 	<ol>
 	<li>For a range, we want to add up the values of all the even numbers, and the values of all the odd numbers.</li>
