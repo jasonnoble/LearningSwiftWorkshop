@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='raw'>
+    <pages>
+        <page name='Welcome'/>
+        <page name='1) Variables and Constants'/>
+        <page name='2) Types and Comments'/>
+        <page name='3) Basic Operations'/>
+        <page name='4) Comparison Operations'/>
+        <page name='5) Boolean Operations'/>
+        <page name='6) Objects'/>
+        <page name='7) Optionals'/>
+        <page name='8) Collections'/>
+        <page name='9) Excercise!'/>
+    </pages>
+</playground>

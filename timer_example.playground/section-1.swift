@@ -31,13 +31,13 @@ class Ticker: NSObject {
     func timerFired() {
         ticks++;
         
-        var frame = child!.frame
+//        var frame = child!.frame
         var center = child!.center
         center.x = center.x - 1
         center.y = center.y + 3
         child!.center = center
         
-        var color = child!.backgroundColor
+//        var color = child!.backgroundColor
         
     }
     
@@ -51,6 +51,6 @@ ticker.start()
 
 var view = ticker.parentView()
 view!
-XCPShowView("view", view!)
+XCPShowView("view", view: view!)
 
-XCPSetExecutionShouldContinueIndefinitely(continueIndefinitely: true)
+XCPSetExecutionShouldContinueIndefinitely(true)

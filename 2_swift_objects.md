@@ -24,7 +24,7 @@ Functions have a *name*, take zero to many *parameters* and have a *return type*
 
 <div class="code-block">
 func printHi() -> Void {
-	println("Hi")
+	print("Hi")
 }
 
 printHi()       // calls the printHi method.  prints "Hi"
@@ -62,7 +62,7 @@ str.hasSuffix("890")        // returns true
 
 // so this works
 if str.hasPrefix("1") {
-	println("The string starts with 1")
+	print("The string starts with 1")
 }
 </div>
 
@@ -105,7 +105,7 @@ Casting may seem tricky, but computers do *exactly what we tell them* so when we
 
 ```swift
 func sayHowdyTo(name:String) -> Void {
-    println( "Howdy \(name)" )
+    print( "Howdy \(name)" )
 }
 
 sayHowdyTo("Brooks")
@@ -115,9 +115,9 @@ sayHowdyTo("Mak")
 func greetPersonNamed(name:String, isMale:Bool) -> Void {
 	sayHowdyTo(name)
 	if isMale {
-		println("* shakes hands *")
+		print("* shakes hands *")
 	} else {
-		println("* courtsey *")
+		print("* courtsey *")
 	}
 }
 
@@ -382,18 +382,18 @@ Since optionals can have their value set to <code class="code-voice">nil</code>,
 <div class="code-block">
 var iAmNil:String? = "not any more"
 if iAmNil != nil {
-	println("The String is not nil")
+	print("The String is not nil")
 }
 </div>
 
-Inside the <code class="code-voice">if</code> now we know *the box has something in it* but we *don't know what it is*.  <code class="code-voice">iAmNil</code> isn't a string, so we can not do this: <code class="code-voice-bad">println("\\(iAmNil) is not nil")</code>.  That will work, but it will print out "Optional("not any more") is not nil".
+Inside the <code class="code-voice">if</code> now we know *the box has something in it* but we *don't know what it is*.  <code class="code-voice">iAmNil</code> isn't a string, so we can not do this: <code class="code-voice-bad">print("\\(iAmNil) is not nil")</code>.  That will work, but it will print out "Optional("not any more") is not nil".
 
 The <code class="code-voice">!</code> force unwraps a conditional.  Once you know the box has something in it, you can use the <code class="code-voice">!</code> to get the value out.
 
 ```swift
 var iAmNil:String? = "not any more"
 if iAmNil != nil {
-	println("\(iAmNil!) is not nil")
+	print("\(iAmNil!) is not nil")
 }
 ```
 
@@ -406,10 +406,10 @@ Swift provides a way to check if an optional has a value, and extract it if it d
 <div class="code-block">
 var optionalValue:Int? = 42
 if let unwrappedValue = optionalValue {
-	println("the value is \(unwrappedValue)")
-	println("which is the same as \(optionalValue!)")
+	print("the value is \(unwrappedValue)")
+	print("which is the same as \(optionalValue!)")
 } else {
-	println("the value is nil")
+	print("the value is nil")
 }
 </div>
 
@@ -418,9 +418,9 @@ This is most frequently done when calling a function or method that returns an o
 <div class="code-block">
 var string = "forty two"
 if let number = string.toInt(){
-	println("\(string) converted to integer \(number)")
+	print("\(string) converted to integer \(number)")
 } else {
-	println("\(string) cannot convert to an integer")
+	print("\(string) cannot convert to an integer")
 }
 </div>
 
@@ -515,7 +515,7 @@ If you want to traverse an entire array, our friend for-in can help:
 <div class="code-block">
 var kidsNames:[String] = ["Mak", "Addi"]
 for kid in kidsNames {
-	println("\(kid)")
+	print("\(kid)")
 }
 </div>
 
@@ -527,7 +527,7 @@ To get just one item out of an array, you use the <code class="code-voice">[]</c
 var kidsNames:[String] = ["Mak", "Addi"]
 var firstKid:String? = kidsNames[0]
 if let kid = firstKid {
-	println("\(kid) was my first")
+	print("\(kid) was my first")
 }
 </div>
 
@@ -560,11 +560,11 @@ for item in items {
     if let string = baconWrap(item) {  /* optional return */
         wrappableItems.append(string)
     } else {
-        println("guess you can't wrap \(item)")
+        print("guess you can't wrap \(item)")
     }
 }
 
-println(wrappableItems)
+print(wrappableItems)
 ```
 
 

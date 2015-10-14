@@ -23,7 +23,7 @@ The Markdown Files are marked-up as follows:
     working swift code
     ```swift
     var foo = "pig"
-    println("\(foo) oinks")
+    print("\(foo) oinks")
 
     ```
 

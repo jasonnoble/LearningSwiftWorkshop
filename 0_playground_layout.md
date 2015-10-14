@@ -19,13 +19,13 @@ a block like this
 
 After this, uses of this highlighting is to aid in finding snippets to type in.
 
-For example, type <code class="code-voice">println("Hello World!")</code> bellow
+For example, type <code class="code-voice">print("Hello World!")</code> bellow
 
 ### Live Code
 You'll notice the **live code** sections start at the far left have line numbers at the left, like this:
 
 ```swift
-println("Howdy!  I've live code!")
+print("Howdy!  I've live code!")
 ```
 
 And on the far right, you should see: <code class="code-voice">Howdy!  I've live code!</code> which is the output of this line of code.
@@ -52,7 +52,7 @@ Let's see that in action:
 ```swift
 // Double forward slash '//' comments out the rest of that line
 
-println("i'm working!") // single-line comments don't have to start the line
+print("i'm working!") // single-line comments don't have to start the line
 
 /*
  This is a comment that spans many lines.
@@ -71,7 +71,7 @@ Once we see the new behavior, in this case Comments, we'll have to fix an exampl
 
 ```swift
 /* I'm gonna tell everyone who the best is!
-println("I'm the best")
+print("I'm the best")
 */
 ```
 

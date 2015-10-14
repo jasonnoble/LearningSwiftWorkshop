@@ -11,7 +11,7 @@ Swift is a new programming language from Apple for iOS and OSX development.  It 
 This file in an Apple **Playground**, and you're viewing it in **Xcode**.  Playgrounds allow you to write Swift code, and get feedback immediately, like this:
 
 ```swift
-println("Hello world!")
+print("Hello world!")
 ```
 
 Xcode is an *Interactive Development Environment* (IDE): a tool software developers use to write and debug software.  Most iOS and OSX apps are written in Xcode.
@@ -91,7 +91,7 @@ Now we will see how these pieces make working code.
 
 /* So is this */
 
-println("This is possible"/* but a very, very bad idea*/)
+print("This is possible"/* but a very, very bad idea*/)
 
 let pi = 3.14159    // pi is a constant and never changes
 var radius = 25     // we'll say this radius is a variable
@@ -107,7 +107,7 @@ var radius = 25     // we'll say this radius is a variable
 
 ```swift
 /** FIX 1
-println("Who's the best?")
+print("Who's the best?")
 //prinln("I'm the best")
 */
 ```
@@ -132,7 +132,7 @@ NOTE: if you don't fix the above correctly, you may comment out the rest of the 
 
 # Basic Operations
 
-We've seen variables and constants, but haven't introduced anything you can *do* with them.  Also, we've seen <code class="code-voice">println()</code> and sorta figured out what that does.
+We've seen variables and constants, but haven't introduced anything you can *do* with them.  Also, we've seen <code class="code-voice">print()</code> and sorta figured out what that does.
 
 An *operator* is a special symbol or phrase that you use to check, change, or combine values.  For example, the addition operator <code class="code-voice">+</code> adds two numbers together: <code class="code-voice">let i = 1 + 2</code>.
 
@@ -274,7 +274,7 @@ In programming we combine *comparison operators* with *conditional statements* l
 
 <div class="code-block">
 if airTemp < 32 {
-	println("NorthFace time Boulder!")
+	print("NorthFace time Boulder!")
 }
 </div>
 
@@ -282,9 +282,9 @@ But what about other temperatures?  If we have just two conditions, then <code c
 
 <div class="code-block">
 if airTemp < 32 {
-	println("NorthFace time Boulder!")
+	print("NorthFace time Boulder!")
 } else {
-	println("Shorts time!")
+	print("Shorts time!")
 }
 </div>
 
@@ -293,11 +293,11 @@ Hmmmmm.  That doesn't seem quite right.  Maybe <code class="code-voice">if / els
 
 <div class="code-block">
 if airTemp < 32 {
-	println("NorthFace time Boulder!")
+	print("NorthFace time Boulder!")
 } else if airTemp < 60 {
-	println("Flannel time!")
+	print("Flannel time!")
 } else {
-	println("Shorts time!")
+	print("Shorts time!")
 }
 </div>
 
@@ -358,21 +358,21 @@ Remember: each clause in an <code class="code-voice">if/else if</code> statement
 var airTemp = 105
 
 if airTemp < 32 {
-	println("NorthFace time Boulder!")
+	print("NorthFace time Boulder!")
 } else if airTemp < 60 {
-	println("Flannel time!")
+	print("Flannel time!")
 } else {
-	println("Shorts time!")
+	print("Shorts time!")
 }
 
 var doesLikeRed = true
 
 if doesLikeRed == true {
-	println("I like red!")
+	print("I like red!")
 }
 
 if doesLikeRed {
-	println("I still like red!")
+	print("I still like red!")
 }
 ```
 
@@ -407,7 +407,7 @@ Be warry of too many nested if statements - they can make code very hard to read
 /** Fix 1
 var willPrintOut = false
 if willPrintOut {
-	println "make this print" 
+	print "make this print" 
 }
 END Fix 1 **/
 
@@ -415,7 +415,7 @@ END Fix 1 **/
 /** Fix 2
 var willNotPrint = false
 if willNotPrint != true {
-	println("don't print this. print nothing here.")
+	print("don't print this. print nothing here.")
 }
 END Fix 2 **/
 
@@ -426,9 +426,9 @@ var valueTwo = false
 if valueOne {
 	prinln("nope - don't print this")
 } else if valueTwo {
-	println("not me either")
+	print("not me either")
 } else {
-	println("this should print")
+	print("this should print")
 }
 END Fix 3 **/
 
@@ -437,12 +437,12 @@ var valueThree = false
 var valueFour = false
 if valueThree {
 	if( valueFour {
-		println("print this nested guy")
+		print("print this nested guy")
 	} else {
-		println("not this dude")
+		print("not this dude")
 	}
 } else {
-	println)"this is right out")
+	print)"this is right out")
 }
 END Fix 4 **/
 
@@ -492,7 +492,7 @@ Consider the following snippet...
 var supportedFormat = true
 
 if !supportedFormat {
-	println("This is not a supported format")
+	print("This is not a supported format")
 }
 </div>
 
@@ -513,9 +513,9 @@ var isReady = true
 var isSet = true
 
 if isReady && isSet {
-	println("Go!")
+	print("Go!")
 } else {
-	println("You must be both ready and set before going")
+	print("You must be both ready and set before going")
 }
 </div>
 
@@ -533,9 +533,9 @@ var hasTicket = false
 var hasBribeMoney = true
 
 if  hasTicket || hasBribeMoney {
-	println("Welcome to the movie")
+	print("Welcome to the movie")
 } else {
-	println("no go")
+	print("no go")
 }
 </div>
 
@@ -549,7 +549,7 @@ var knowsFirstStreet = false
 var knowsMascot = true
 
 if  knowsPassword && ( knowsMothersMaiden || knowsFirstStreet || knowsMascot ) {
-	println("seems legit")
+	print("seems legit")
 }
 
 // prints "seems legit"
@@ -568,31 +568,31 @@ var isWearingScarf = true
 
 if isFreezing && isWearingScarf {
 	// both true
-	println("good to go")
+	print("good to go")
 } else if isFreezing {
 	// only isFreezing true
-	println("you need a scarf")
+	print("you need a scarf")
 } else if isWearingScarf {
 	// only isWearingScarf true
-	println("it's not that cold.  take off the scarf")
+	print("it's not that cold.  take off the scarf")
 } else {
 	// both false
-	println("also, good to go")
+	print("also, good to go")
 }
 
 // there are a couple ways to skin this cat
 
 if isFreezing {
 	if isWearingScarf {
-		println("good to go")
+		print("good to go")
 	} else {
-		println("you need a scarf")
+		print("you need a scarf")
 	}
 } else {
 	if isWearingScarf {
-		println("it's not that cold.  take off the scarf")
+		print("it's not that cold.  take off the scarf")
 	} else {
-		println("also, good to go")
+		print("also, good to go")
 	}
 }
 
@@ -600,21 +600,21 @@ if isFreezing {
 
 if !isFreezing {
 	if !isWearingScarf {
-		println("also, good to go")
+		print("also, good to go")
 	} else {
-		println("it's not that cold.  take off the scarf")
+		print("it's not that cold.  take off the scarf")
 	}
 } else {
 	if isWearingScarf {
-		println("good to go")
+		print("good to go")
 	} else {
-		println("you need a scarf")
+		print("you need a scarf")
 	}
 }
 
 // the NOT ! operator is good for one off expressions
 if isFreezing && !isWearingScarf {
-	println("I bet you forgot your hat, too")
+	print("I bet you forgot your hat, too")
 }
 
 ```
@@ -629,7 +629,7 @@ Your *coding style* should be clean and easy to read.  Pick good names, and make
 <div class="fix-block">
 	<span class="title">Fix #4: Logical Operators </span>
 	<p>The software that provides instructions on keeping our machine running is looking a bit rough.</p>
-	<p>Without changing the println statements, fix the slew of errors below.</p>
+	<p>Without changing the print statements, fix the slew of errors below.</p>
 </div>
 
 ```swift
@@ -642,14 +642,14 @@ var minTemp     = 400
 
 if !isRunning {
 	if (currentTemp < maxTemp) && (currentTemp > minTemp) {
-		println("normal operating conditions")
+		print("normal operating conditions")
 	} else if currentTemp !> minTemp {
-		println("running to cold.  remove water.")
+		print("running to cold.  remove water.")
 	} else {
-		println("runing too hot.  add water.")
+		print("runing too hot.  add water.")
 	}
 } else {
-	println("Call Maintenance!")
+	print("Call Maintenance!")
 }
 */
 ```
@@ -686,17 +686,17 @@ Y'all are sharp, I bet you pick this up just from a few examples.
 
 ```swift
 var anyNumberAtAll = 42
-println ("the value is \(anyNumberAtAll)")
+print ("the value is \(anyNumberAtAll)")
 
 var iAmTrue = true
-println ("true is \(iAmTrue)")
+print ("true is \(iAmTrue)")
 
-println ("math: 2 + 2 = \(2+2)")
+print ("math: 2 + 2 = \(2+2)")
 
 var firstNumber = 4
 var secondNumber = 2
 
-println("more math: \(firstNumber) + \(secondNumber) = \(firstNumber + secondNumber)")
+print("more math: \(firstNumber) + \(secondNumber) = \(firstNumber + secondNumber)")
 
 ```
 
@@ -706,7 +706,7 @@ The <code class="code-voice">for-in</code> loop itterates (or "goes over") a ran
 
 <div class="code-block">
 for index in 1...4 {
-	println("\(index) squared is \(index * index)")
+	print("\(index) squared is \(index * index)")
 }
 
 // 1 squared is 1
@@ -725,7 +725,7 @@ Index is a *constant* not a variable, you can not change it's value.  You can us
 var start = 1
 var end   = 4
 for index in start...end {
-	println("\(index) squared is \(index * index)")
+	print("\(index) squared is \(index * index)")
 }
 
 // 1 squared is 1
@@ -738,7 +738,7 @@ This is pretty neat.  You can get each character of a string as well.
 
 <div class="code-block">
 for character in "howdy" {
-	println( character )
+	print( character )
 }
 
 // h
@@ -761,15 +761,15 @@ When we learn about *Collections* we will see that for-in works for them as well
 var start = 1
 var end   = 4
 for ii in start...end {
-	println("\(ii) squared is \(ii * ii)")
+	print("\(ii) squared is \(ii * ii)")
 }
 ```
 
 <code class="code-voice">(4 times)</code> is strange output, huh?  Hover over <code class="code-voice">(4 times)</code> over there on the right.  There are *Quick View* (looks like an eyeball) and *Value History* (white circle with +) buttons.  Click *Value History* and behold the **Timeline** as it appears.  The Timeline gives us console output (at the top) and the ability to watch lines of code.
 
-Also open in the *Console Output* window.  This is the output of all the println() statements we've been making.  If you close this window, just change your code and it will re-open with fresh output.
+Also open in the *Console Output* window.  This is the output of all the print() statements we've been making.  If you close this window, just change your code and it will re-open with fresh output.
 
-When we loop, we're printing more than one thing - so there isn't a way to show those lines of output in the gutter, where we've been looking.  In this case, when you click on *Value History* you're given a new window in the timeline that outputs the string for each time the loop executed, and the window is labeled with the line it's evaluating <code class="code-voice">println("\(index) squared is \(index * index)")</code>.
+When we loop, we're printing more than one thing - so there isn't a way to show those lines of output in the gutter, where we've been looking.  In this case, when you click on *Value History* you're given a new window in the timeline that outputs the string for each time the loop executed, and the window is labeled with the line it's evaluating <code class="code-voice">print("\(index) squared is \(index * index)")</code>.
 
 Change the loop above, and watch the output in the Value History window change.  Maybe make it do different math.
 
@@ -780,18 +780,18 @@ Change the loop above, and watch the output in the Value History window change. 
 </div>
 
 
-You can put loops inside of loops, too.  This is called a **nested loop**.  Open a *Quick View* on <code class="code-voice">println("\(ii) * \(jj) = \(ii * ii)")</code> below, or just read it in the *Console Output*.
+You can put loops inside of loops, too.  This is called a **nested loop**.  Open a *Quick View* on <code class="code-voice">print("\(ii) * \(jj) = \(ii * ii)")</code> below, or just read it in the *Console Output*.
 
 ```swift
 // markers can help, if you're watching the Console Output
-println("**********************")
+print("**********************")
 
 var outerMax  = 3
 var innerMax  = 4
 
 for ii in 1...outerMax {
 	for jj in 1...innerMax {
-		println("\(ii) * \(jj) = \(ii * ii)")
+		print("\(ii) * \(jj) = \(ii * ii)")
 	}
 }
 ```
@@ -806,7 +806,7 @@ for ii in 1...value {
 	factor = factor * ii
 }
 
-println("\(value)! is \(factor)")
+print("\(value)! is \(factor)")
 ```
 
 <div class="fix-block">
@@ -818,7 +818,7 @@ println("\(value)! is \(factor)")
 \*\*
 \*\*\*
 \*\*\*\*</div>
-	<p>We have only used the <code class="code-voice">println()</code> command so far.  The <code class="code-voice">print()</code> command is very similar, but it doesn't start a new line.  So <code class="code-voice">println()</code> prints a string to the console, then presses *return* (basically).  <code class="code-voice">print()</code> prints to the console, then DOES NOT press *return*.  Calling <code class="code-voice">println()</code> with no argument (with no string) is just like pressing *return*.</p>
+	<p>We have only used the <code class="code-voice">print()</code> command so far.  The <code class="code-voice">print()</code> command is very similar, but it doesn't start a new line.  So <code class="code-voice">print()</code> prints a string to the console, then presses *return* (basically).  <code class="code-voice">print()</code> prints to the console, then DOES NOT press *return*.  Calling <code class="code-voice">print()</code> with no argument (with no string) is just like pressing *return*.</p>
 </div>
 
 ```swift
@@ -829,9 +829,9 @@ var numberOfRows = 10
 for ii in numberOfrows...1 {
     var str = ""
     for jj in 1..ii {
-        println("*")
+        print("*")
     }
-    println()
+    print()
 }
 
 */
