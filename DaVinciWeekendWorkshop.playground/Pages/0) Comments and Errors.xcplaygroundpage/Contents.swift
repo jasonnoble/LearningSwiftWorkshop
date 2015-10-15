@@ -103,5 +103,5 @@ pi * 10
 
 /*:
 
-[Next](@next) we learn about storing and retrieving values.
+[Next](@next) we learn about storing and retrieving values
 */
