@@ -1,7 +1,5 @@
-//: [Previous](@previous)
+/*:
+[Previous](@previous)
 
-import Foundation
-
-var str = "Hello, playground"
-
-//: [Next](@next)
+[Next](@next)
+*/

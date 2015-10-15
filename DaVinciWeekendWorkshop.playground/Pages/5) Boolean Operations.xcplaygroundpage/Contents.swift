@@ -1,7 +1,20 @@
-//: [Previous](@previous)
+/*:
+[Previous](@previous)
 
-import Foundation
+![Look](Look.png)
+>
+*/
 
-var str = "Hello, playground"
+/*:
+![Fix](Fix.png)
+>
+*/
 
-//: [Next](@next)
+/*:
+![Write](Write.png)
+>
+*/
+
+/*:
+[Next](@next)
+*/

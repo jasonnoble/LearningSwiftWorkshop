@@ -56,10 +56,6 @@ We will step through this document, page by page.
 
 I'll talk over a concept, adding color commentary to the Playground.
 
-
-
-
-
 ## Look / Fix / Write
 
 We have 10 exercises we'll go through: 0 through 9.  

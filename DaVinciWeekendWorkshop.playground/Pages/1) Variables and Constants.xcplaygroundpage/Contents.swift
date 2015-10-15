@@ -1,16 +1,20 @@
 /*:
 [Previous](@previous)
-----
 
-# Code!
-
-constants variables
-
-![Fix](Fix.png)
-
+![Look](Look.png)
+>
 */
 
 /*:
-----
+![Fix](Fix.png)
+>
+*/
+
+/*:
+![Write](Write.png)
+>
+*/
+
+/*:
 [Next](@next)
 */
