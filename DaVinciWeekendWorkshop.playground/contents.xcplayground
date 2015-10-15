@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='rendered'>
+<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='raw'>
     <pages>
         <page name='Welcome'/>
         <page name='0) Comments and Errors'/>
         <page name='1) Variables and Constants'/>
-        <page name='2) Types and Methods'/>
-        <page name='3) Basic Operations'/>
-        <page name='4) Comparison Operations'/>
-        <page name='5) Boolean Operations'/>
-        <page name='6) Objects'/>
-        <page name='7) Optionals'/>
-        <page name='8) Collections'/>
-        <page name='9) Excercise!'/>
+        <page name='2) Types and Functions'/>
+        <page name='3) Comparison Operations'/>
+        <page name='4) Logical Operations'/>
+        <page name='5) Loops and Ranges'/>
+        <page name='X) Objects'/>
+        <page name='X) Optionals'/>
+        <page name='X) Collections'/>
+        <page name='X) Excercise!'/>
         <page name='misc'/>
     </pages>
 </playground>
