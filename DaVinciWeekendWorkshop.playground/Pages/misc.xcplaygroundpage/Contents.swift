@@ -4,6 +4,9 @@
 - `CMD + SHIFT + Y` - Show Debug Area
 - `CMD + OPT + ENTER` - Show Assitant Editor
 
+[This Project in Github](https://github.com/hollarab/LearningSwiftWorkshop)
+
+[Rocket App Github](https://github.com/hollarab/LearningSwiftRocketApp)
 
 [Playground Help](https://developer.apple.com/library/watchos/recipes/Playground_Help/_index.html#//apple_ref/doc/uid/TP40015166)
 

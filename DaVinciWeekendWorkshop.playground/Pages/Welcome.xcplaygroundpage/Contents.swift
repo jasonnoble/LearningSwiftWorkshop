@@ -4,8 +4,9 @@
 The purpose of this document is to introduce novices to computer programming.  Programming concepts are introduced slowly through this interactive document (an Apple Playground).
 
 ## Feedback
-
-This is very much a work in progress, and I'd appreciate your feedback: hollarab@gmail.com
+* This is very much a work in progress, and I'd appreciate your feedback
+* hollarab@gmail.com
+* https://github.com/hollarab/LearningSwiftWorkshop
 
 # Learning to program: Introduction
 
