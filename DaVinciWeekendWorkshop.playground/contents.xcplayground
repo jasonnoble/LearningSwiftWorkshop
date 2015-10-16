@@ -8,10 +8,10 @@
         <page name='3) Comparison Operations'/>
         <page name='4) Logical Operations'/>
         <page name='5) Loops and Ranges'/>
-        <page name='X) Objects'/>
-        <page name='X) Optionals'/>
-        <page name='X) Collections'/>
-        <page name='X) Excercise!'/>
+        <page name='Review'/>
+        <page name='6) Optionals'/>
+        <page name='7) Objects'/>
+        <page name='8) Excercise!'/>
         <page name='misc'/>
     </pages>
 </playground>

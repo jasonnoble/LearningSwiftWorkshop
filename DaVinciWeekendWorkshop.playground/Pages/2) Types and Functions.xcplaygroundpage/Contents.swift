@@ -30,33 +30,39 @@ A `Float` is a *floating-point number: a positive or negative number with a deci
     var cc = -1.0
     var dd:Float = 11.0
 
+#### Double
+A `Double` is a **really big** *floating-point number: a positive or negative number with a decimal*.
+
+    var ee = -1.0
+    var ff:Double = 11.0
+
 #### Bool
 A `Bool` is either `true` or `false`
 
-    var ee = true
-    var ff:Bool = false
+    var gg = true
+    var hh:Bool = false
 
 #### String
 A `String` is a *string of characters* and set appart with double-quotes.
 
-    let gg = "Hello"
-    let hh:String = "World!"
+    let ii = "Hello"
+    let jj:String = "World!"
 
 ### Type Casting
 When we have one type, and need another, we may have to *cast*
 
-    let ii:Int = 1
-    let jj:Float = 1.0
+    let kk:Int = 1
+    let ll:Float = 1.0
 
-    ii + jj            // ERROR - different types
-    Float(ii) + jj     // "cast" ii to a Float, then add them together
-    ii + Int(jj)       // "cast" jj to an Int, then add them together
+    kk + ll            // ERROR - different types
+    Float(kk) + ll     // "cast" kk to a Float, then add them together
+    kk + Int(ll)       // "cast" ll to an Int, then add them together
 
 ### Printing the type
 We can get the type of a variable or constant with `.dynamicType`
 
-    let kk:Float = 2.0
-    kk.dynamicType     // returns "Float.Type"
+    let mm:Float = 2.0
+    mm.dynamicType     // returns "Float.Type"
 
 
 ## Functions

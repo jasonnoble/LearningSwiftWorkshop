@@ -89,16 +89,18 @@ Each clause in an `if/else if` statement must evaluate to either `true` or `fals
 > 3. Be careful how you name things and form logic clauses.  You can cause a real mess.
 */
 
-/* 1. change this value */
-var airTemp = 105
-
-if airTemp < 32 {
-    print("NorthFace time Boulder!")
-} else if airTemp < 60 {
-    print("Flannel time!")
-} else {
-    print("Shorts time!")
+func clothingAdviceForTemp(temp:Int) -> String {
+    if temp < 32 {
+        return "NorthFace time Boulder!"
+    } else if temp < 60 {
+        return "Flannel time!"
+    } else {
+        return "Shorts time!"
+    }
 }
+
+clothingAdviceForTemp(125)
+/* 1. change this value */
 
 
 
@@ -120,23 +122,21 @@ if !doILikeRed {      // notice the "!"
 
 
 /* 3. This is not good */
-var a = true
-var b = false
-var c = true
-var d = 123
-var e = -3
-
-if a == c {
-    if e < d {
-        print("Fire missles!")
-    } else if b == c {
-        print("Send Tweet")
+func doThis(a:Bool, b:Bool, c:Bool, d:Int, e:Float) {
+    if a == c {
+        if Int(e) < d {
+            print("Fire missles!")
+        } else if b == c {
+            print("Send Tweet")
+        } else {
+            print("Request appointment")
+        }
     } else {
-        print("Request appointment")
+        print("set background color to blue")
     }
-} else {
-    print("set background color to blue")
 }
+
+doThis(true, b: false, c: false, d: 23, e: 23.0)
 
 
 /*:
@@ -238,7 +238,7 @@ print)"this is right out")
 > If fewer hours have passed than beers I had: print "NO" 
 > Otherwise: print "YES"
 >
-> Use if/then/else statements to tell me if I can drive home based on how much beer I've had, and how long I've waited.
+> Write a function with if/then/else statements to tell me if I can drive home based on how much beer I've had, and how long I've waited.
 */
 
 var beerCount = 7
