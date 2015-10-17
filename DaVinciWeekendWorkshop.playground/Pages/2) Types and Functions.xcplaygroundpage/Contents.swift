@@ -1,21 +1,14 @@
 /*:
 [Previous](@previous)
-
-## Review
-* Comments
-* Errors
-* Variables
-* Constants
-* Arithmetic operations
-
-## Types
+# Types
 * Swift is a *strongly-typed* language, this means the compiler must know what *type* an variable or constant is.  
   * We've been able to skip this, because Swift *implies* the type for you.
   * Code examples were chosen to avoid this problem while basics were learned.
 
-### Specify type at declaration
+## Specify type at declaration
+* `let aConstant:TypeName = Value`
+* `var aVariable:TypeName = Value`
 * add a colon and the type's name after the name
-* (`let` or `var`)`:TypeName = Value`
 * all names are **case sensative** in Swift
 
 #### Int
@@ -48,6 +41,8 @@ A `String` is a *string of characters* and set appart with double-quotes.
     let ii = "Hello"
     let jj:String = "World!"
 
+"\n" is the **newline character** - it's the same as pressing the `Enter` key
+
 ### Type Casting
 When we have one type, and need another, we may have to *cast*
 
@@ -71,7 +66,7 @@ We can get the type of a variable or constant with `.dynamicType`
 * Functions allow us to re-use code and make our code readable.
 * Functions have a *name*, take zero to many *arguments* and have a *return type*.
 
-### Printing
+### The print() function
 * `print(param)` is a built-in function for printing information
     * this function is named "print"
     * it takes one argument
@@ -80,13 +75,13 @@ We can get the type of a variable or constant with `.dynamicType`
 
     let printMe:String = "Hello World!"
     print(printMe)                        // prints "Hello World!\n" on console
-    
+
     print(1+1)                            // prints "2\n" but this a weird use case
-    
+
     var someValue:10 = 10
     print("The value is " + someValue)    // prints "The value is 10\n"
 
-### Creating our functions
+### Creating functions
 * Finally.  Now we see how to *program a computer*
 * Writting our own functions allows us to solve specific parts of a problem.
 
@@ -98,6 +93,7 @@ We can get the type of a variable or constant with `.dynamicType`
     var squared = square(2)               // squared is equal to 4
 
 
+### Executing functions
 * Functions are only *executed when they are called*.
 * Notice below, the arguments each have a type associated with them
 
@@ -109,6 +105,7 @@ We can get the type of a variable or constant with `.dynamicType`
 
     sayHelloTo("Brooks")                  // prints "Howdy Brooks!\n"
 
+### Passing parameters
 * Functions with more than one argument, require a label for each past the first
 
 
@@ -120,7 +117,9 @@ We can get the type of a variable or constant with `.dynamicType`
     print(sum)                            // prints "4\n"
 
 
+*/
 
+/*:
 ![Look](Look.png)
 > Let's see the examples above in action
 */
@@ -219,5 +218,5 @@ addTwoInt(550, intTwo: 11.0)
 
 
 /*:
-[Next](@next)
+[Next](@next) we learn about comparisons and modifying control flow
 */

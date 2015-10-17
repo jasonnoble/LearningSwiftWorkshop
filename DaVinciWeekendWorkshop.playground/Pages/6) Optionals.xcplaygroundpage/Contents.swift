@@ -8,17 +8,17 @@ Until now, all our variables and constants have had a value.  Our world has been
 
 This was a new concept for me.  Optionals aren't new, but I had never heard of (them)[http://en.wikipedia.org/wiki/Option_type].
 
-Here is an example.  `String` implents the `toInt()` method.  But not every string can be converted to a numeric value.  "42" converts, but not "hey", "howdy" or even "forty-two".  So `toInt()` doesn't return an `Int` but an `Int?`.  Optionals are indicated with a `?`.
+Here is an example.  The `Int()` method returns an optional type.  But not every string can be converted to a numeric value.  "42" converts, but not "hey", "howdy" or even "forty-two".  So `Int()` doesn't return an `Int` but an `Int?`.  Optionals are indicated with a `?`.
 
-The signature of `toInt()` is: `toInt() -> Int?`
+The signature of `Int()` is: `Int() -> Int?` (sorta)
 
     let someNumber = "42"
-    let convertedNumber = someNumber.toInt()
+    let convertedNumber = Int(someNumber)
 
 Let's add our type annotations in, to really see what's happening.
 
     let someNumber:String = "42"
-    let convertedNumber:Int? = someNumber.toInt()
+    let convertedNumber:Int? = Int(someNumber)
 
 `convertedNumber` is an "optional int" written `Int?` in code.
 
@@ -37,7 +37,7 @@ What if the box is empty?  What happens when the value is absent?  What does thi
     var anotherNumber:Int? = 42
     anotherNumber = nil         // VALID.  anotherNumber has no value set
 
-    "fortytwo".toInt()          // returns nil
+    Int("fortytwo")          // returns nil
 
 If you declare an optional variable, and don't set a value, then it has a value of `nil`.
 
@@ -60,15 +60,12 @@ Inside the `if` now we know *the box has something in it* but we *don't know wha
 
 The `!` force unwraps a conditional.  Once you know the box has something in it, you can use the `!` to get the value out.
 
-*/
+    var iAmNil:String? = "nope"
 
-var iAmNil:String? = "not any more"
+    if iAmNil != nil {
+        print("\(iAmNil!) is not nil")
+    }
 
-if iAmNil != nil {
-    print("\(iAmNil!) is not nil")
-}
-
-/*:
 **NOTE** if you use `!` to unwrap a `nil` value, your program will CRASH with a runtime error.  That's bad.  Always make sure you know an optional has a value, before you unwrap it.  The following mechanisms make that easier.
 
 ### Optional Binding
@@ -88,7 +85,7 @@ This is most frequently done when calling a function or method that returns an o
 
     var string = "forty two"
 
-    if let number = string.toInt(){
+    if let number = Int(string){
         print("\(string) converted to integer \(number)")
     } else {
         print("\(string) cannot convert to an integer")
@@ -155,24 +152,28 @@ if let color = backColor {
 /*:
 
 ![Fix](Fix.png)
->
+> Here are some examples of erroreous code with Optionals.
+> 
+> It is helpful to see what the errors look like, and how to fix them.
 */
 
 /*  /** UNCOMMENT **/
 var aString:String = "howdy!"
 aString = nil
+
+if let str == aString {
+    print("\(str) defined)
+}
+
+var intVal:Int = Int("this")
+
+var fail:Double? = nil
+print(fail!)
+
 */  /** UNCOMMENT **/
 
-
-
-
 /*:
-![Write](Write.png)
->
-*/
+Skipping Write this time.
 
-
-
-/*:
-[Next](@next)
+[Next](@next) up, Objects
 */

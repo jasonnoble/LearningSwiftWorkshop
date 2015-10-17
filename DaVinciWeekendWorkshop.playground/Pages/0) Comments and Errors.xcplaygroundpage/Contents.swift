@@ -8,21 +8,26 @@
 - all comments are ignored by the *compiler*
 - this text you're reading right now, is really just a *fancy* comment!
 
-**one-line** comments are designated with `//` 
-
-**many-line** comments start with `\/\*` and end with `\*\/`
-
-----
-
+**one-line** comments:
+*/
+// start with "double forward slash"
+/*:
+**many-line** comments
+*/
+/* 
+  start with "forward slash star"
+  end with "star forward slash"
+ */
+/*:
 ## Errors
 - many errors are found by the compiler as you enter source code
 - many other errors are found at runtime
 
 ![Nope](Error.png)
 
-*/
+#### Nope.  That isn't going to work
 
-/*:
+----
 
 ![Look](Look.png)
 
@@ -57,18 +62,18 @@ It can go on forever
   This is the ONE TIME you want to see errors in Xcode: when you're learning what they look like.
 */
 
-1 + 1 = 3
+3 x 10
 
 /*:
 
 Before we continue, let's talk about errors - they break stuff.  You need to fix the errors in your code so that the Playground runs correctly.
 
-Comment out or delete the code above that may be *throwing an error*.
+#### Comment out or delete any code above that may be *throwing an error*.
 
 ![Fix](Fix.png)
 > Be double sure you don't have errors above (or leave any when you're done below)
 >
-> When you see `\/\*\* UNCOMMENT \*\*\/` then you should **delete the comments that are preventing the line or block of code from running**.  (like we did above)
+> When you see `UNCOMMENT` then you should **delete the comments so that the code will run**.
 >
 > All the **fix** exercises work on this principle.  
 > 1. Uncomment code

@@ -13,6 +13,7 @@ In Swift we declare a constant with the `let` keyword, and can set it to a value
     let carYear = 2004
 
 **Variables** are like constants, except they can change.  
+
 Sticking with our car example, mileage, color and if it's moving could all be variables.
 
 Variables are declared with the `var` keyword and are assigned with `=`.
@@ -34,9 +35,9 @@ Variables can change value after assignment, unlike constants.
 
 /*:
 ![Look](Look.png)
-> We can use *variables* and *constants* to hold values.  For now we will stick with math.
+> We can use *variables* and *constants* to hold values.  
 >
->
+> For now we will stick with mathmatic operations, and holding numbers.
 */
 
 let appleCount  = 10                        // a constant

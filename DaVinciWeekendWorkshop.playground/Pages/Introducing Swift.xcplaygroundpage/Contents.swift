@@ -5,7 +5,8 @@
 ## Swift
 
 Swift is a new programming language from Apple for iOS and OSX development.
-It was released to the public in the summer of 2014, and was in development at Apple for a few years prior to that.
+It was released to the public in the summer of 2014.
+
 Swift 2.0 was released a month ago, and 2.1 is on it's way.
 
 ## Exciting Times!
@@ -35,15 +36,13 @@ print("Hello world!")
 /*:
 You should see this image on the right side of your screen.
 
-[See this?](HelloWorld.png)
-
+![See this?](HelloWorld.png)
 
 Xcode is an *Interactive Development Environment* (IDE): a tool software developers use to write and debug software.  *Almost all* iOS and OSX apps are written in Xcode.
 
 ----
 
 ## Today's agenda
-
 
 We will step through this document, page by page.
 

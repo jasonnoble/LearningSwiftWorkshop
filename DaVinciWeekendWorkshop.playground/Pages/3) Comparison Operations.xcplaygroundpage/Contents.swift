@@ -3,7 +3,9 @@
 
 # Conditional Statements
 
-Math is good, but what we need to be able to make decisions and do different things based on some conditions.  We need to be able to **do stuff** based on **what we know**.
+Math is good, but what we need to be able to make decisions and do different things based on some conditions.  
+
+We need to be able to **do stuff** based on **what we know**.
 
 If the temperature is below freezing, suggest a jacket.
 
@@ -38,6 +40,7 @@ Hmmmmm.  That doesn't seem quite right.  Maybe `if / elseif` is the way to go.
 * You can "reverse" or "flip" a boolean expression with `!`
 * `!true` is `false`
 
+
     var warningLightOn:Bool = true
 
     if !warningLightOn {
@@ -54,31 +57,33 @@ These are all the comparison operators and each returns a `Bool` value.
 
 #### == Equals
 * Are two expressions the same?
-* 1 = 1
+* `1 = 1`
 
 #### != Not Equals
 * Are two expressions not the same?
-* 1 != 2
+* `1 != 2`
 
 #### < Less Than
 * Is the first expression smaller than the second?
-* 1 < 2
+* `1 < 2`
 
 #### > Greater Than
 * Is the first expression larger than the second?
-* 2 > 1
+* `2 > 1`
 
 #### <= Less Than or Equal To
 * Is the first expression smaller or the same as the second?
-* 1 <= 1
+* `1 <= 1`
 
 #### >= Greater Than or Equal To
 * Is the first expression larger or the same as the second?
-* 1 >= 1
+* `1 >= 1`
 
 ### Remember
 Each clause in an `if/else if` statement must evaluate to either `true` or `false`.
+*/
 
+/*:
 
 ![Look](Look.png)
 > This is a Playground, so make sure you're playing with these working examples and observe
@@ -256,5 +261,5 @@ In the above example that good names were choosen for variables.
 
 Sure, you could use the variables wrong, but by choosing good names it makes our code more **readable** which is a good thing and help you or others find errors.
 
-[Next](@next)
+[Next](@next) we add logic to the mix
 */

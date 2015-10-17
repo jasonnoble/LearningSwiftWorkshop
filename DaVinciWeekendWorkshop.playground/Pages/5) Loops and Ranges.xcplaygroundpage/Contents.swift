@@ -9,7 +9,7 @@ Swift provides two kinds of **loops** that perform a set of statements a certain
 
 Swift includes two range operators, which are shortcuts for expressing a range of values.
 
-## For-In
+#### For-In
 
 The `for-in` loop itterates (or "goes over") a range of things.  For now, we'll look at a range of numbers.
 
@@ -22,7 +22,9 @@ The `for-in` loop itterates (or "goes over") a range of things.  For now, we'll 
     // 3 squared is 9
     // 4 squared is 16
 
-Swift gives us a cool thing called the *closed range operator* `...` to itterate through a range of numbers, inclusive of both numbers.  So `1...3` will go 1, 2, 3. `4...5` will go 4, 5.
+Swift gives us a cool thing called the *closed range operator* `...` to itterate through a range of numbers, inclusive of both numbers.  So `1...3` will go 1, 2, 3. `4...6` will go 4, 5, 6.
+
+The *open range operator* `..<` to itterate through a range of numbers, inclusive of both numbers.  So `1..<4` will go 1, 2, 3.
 
 In this example `index` is set to the first value in the range (1), and the code between the curly braces `{ }` is executed.  Then `index` is set to the next value in the range (2), the code is executed again.  It **loops** like this until it gets to the end of the range (4).
 
@@ -47,13 +49,13 @@ This is pretty neat.  You can get each character of a string as well.
         print( character )
     }
 
-    // h
-    // o
-    // w
-    // d
-    // y
+    "h"
+    "o"
+    "w"
+    "d"
+    "y"
 
-When we learn about *Collections* we will see that for-in works for them as well (which is awesome).
+Swift *Collections* support *fast itteration* using the `for / in` loop.
 
 ![Look](Look.png)
 > Let's take a look at one of the examples we just used.
@@ -90,8 +92,8 @@ Above we imported `XCPlayground` and `Foundation`.  These are *Apple frameworks*
  * `XCPlayground` gave us the `XCPCaptureValue` function
  * `Foundation` gave us `sin` function
 
-    import XCPlayground
 
+    import XCPlayground
     XCPCaptureValue("Some name", valueToWatch)
     //CMD + OPT + ENTER to see timeline
 
@@ -110,15 +112,15 @@ var innerMax  = 4
 for ii in 1...outerMax {
     for jj in 1...innerMax {
         print("\(ii) * \(jj) = \(ii * ii)")
-        XCPCaptureValue("outerMax", value: ii)
-        XCPCaptureValue("innerMax", value: jj)
+//        XCPCaptureValue("outerMax", value: ii)
+//        XCPCaptureValue("innerMax", value: jj)
     }
 }
 
 /*:
+The real power of loops is when you change something that's stays around when the loop is done.  
 
-The real power of loops is when you change something that's stays around when the loop is done.  Say we want to calculate a *factorial*, where the facotorial of 5 (5!) is 5 x 4 x 3 x 2 x 1.
-
+Say we want to calculate a *factorial*, where the facotorial of 5 (5!) is 5 x 4 x 3 x 2 x 1.
 */
 
 print("+++++++++++++++")
@@ -140,10 +142,10 @@ print("\(value)! is \(factor)")
 >
 > We want to print a triange to the console, by specifying the number of rows.  The following has 4 rows.
 >
-> `    *`
-> `    **`
-> `    ***`
-> `    ****`
+>       *
+>       **
+>       ***
+>       ****
 > 
 > We have only used the `print(string)` function so far, but it can do more.  `print(String, terminator:"")` command is very similar, but it doesn't start a new line.  So `print(string)` prints a string to the console, then presses *return* (basically).  `print(string, terminator:"")` prints to the console, then DOES NOT press *return*.  Calling `print("")` (with and empty string) is just like pressing *return*.
 */
@@ -192,7 +194,5 @@ oddSum
 
 /*:
 
-Break time!
-
-[Next](@next)
+[Next](@next) a little review, then something that was new to me with Swift, Optionals.
 */

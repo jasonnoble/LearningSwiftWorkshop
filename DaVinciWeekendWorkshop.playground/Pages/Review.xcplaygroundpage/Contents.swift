@@ -1,9 +1,12 @@
 /*:
+[Previous](@previous)
 
 # Review
 
 ## Variables and Constants
-
+* Constants don't change
+* Variables can change
+* Both are *strongly typed*
 
 ## Types
 Swift is a *strongly-typed* language, this means the compiler must know what *type* an variable or constant is.  We've been able to skip this, because Swift *implies* the type for you.  Code examples were chosen to avoid this problem while some basics were learned.
@@ -15,8 +18,7 @@ All our examples in Part 1 were one of the four types below.
     var aBool:Bool        = true
     var someWords:String  = "a string"
 
-So when we wrote, `var isReady = true`, Swift knew it was really `var isReady:Bool = true`.
-
+So when we wrote `var isReady = true` Swift knew it was really `var isReady:Bool = true`.
 
 ## Functions
 
@@ -49,7 +51,7 @@ Functions have a *name*, take zero to many *parameters* and have a *return type*
     
     
 ## Casting
-**Casting** is when you change a type from one to another.  
+*Casting* is when you change a type from one to another.
     
     function squareAFloat(floatValue:Float) -> Float {
         return floatValue * floatValue
@@ -60,13 +62,37 @@ Functions have a *name*, take zero to many *parameters* and have a *return type*
     squareAFloat( Float(intValue) )
     // cast to a Float to pass to the method
 
-## Conditions, Comparison, Logic
+## Conditions, Comparison
 We use `if`, `if/else`, `if/elseif` statements (and others) to create conditional flows.
 
 Comparisons and functions that evaluate to `true` or `false` help.
+
+    if this > that {
+        // do a thing
+    } else if this == that {
+        // do another thing
+    } else {
+        // worst case
+    }
+
+## Logic
+
+    &&  And
+    ||  Or
+    !   Not
+    
+    ==  Equals
+    !=  Not Equals
 
 ## Loops, Ranges
 Support doing sequences of operations.
 
 
+    for ii in 0..<10 {
+        // count from 0 to 9
+    }
+
+----
+
+[Next](@next) on to Optionals
 */

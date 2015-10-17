@@ -35,7 +35,9 @@ For example, `String` has
     `+` add two strings together `var str = "hi " + "there"`
     `+=` `str += " friend"`
     `==` `str == "hi there friend"` returns `true`
+*/
 
+/*:
 ![Look](Look.png)
 > `CMD + SHIFT + Y` for Console.
 >
@@ -104,6 +106,7 @@ The ReminderItem class has:
 * complete `Bool` - required - default set to false
 * a **constructor** `init(initialText:String)` that takes a String and creates a new, valid ReminderItem object
 * a **method** `howImportant()` that returns a string saying how important it is, based on user's rating
+
 
     let itemOne = ReminderItem(initialText: "grab the milk")
     itemOne.howImportant()
@@ -250,6 +253,7 @@ largeRec.perimeter()
 >
 > It should have functions to return area() and perimeter() like our other shapes
 */
+
 
 
 

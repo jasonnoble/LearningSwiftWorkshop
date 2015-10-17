@@ -10,7 +10,7 @@ Swift supports the three standard logical operators found in C-based languages:
 * Logical AND `a && b`
 * Logical OR  `a || b`
 
-## ! NOT Operator
+#### ! NOT Operator
 A logical NOT `!a` operator *flips* the value of a Boolean to it's opposite: `true` becomes `false`, `false` becomes `true`.
 
 An `!` appears directly in front of the value it's negating with no space. This is called a *prefix* operator.
@@ -31,7 +31,7 @@ Apple uses consistent, active words in a lot of their code.
 
 Variable names like `isActive`, `isReady`, `shouldDenyAccess` are pretty clear all on their own.
 
-## && AND Operator
+#### && AND Operator
 
 The logical AND operator `a && b` creates logical expressions where both values must be `true` for the overall expression to also be `true`.
 
@@ -53,7 +53,7 @@ In this example, both values must be true.
     }
 
 
-## || OR Operator
+#### || OR Operator
 
 The logical OR operator `a || b` creates logical expressions in which only one of the two values has to be `true` for the overall expression to be `true`.
 
@@ -81,7 +81,9 @@ The logical operations can also be combined.  Remember to make your code readabl
     if  knowsPassword && ( knowsMothersMaiden || knowsFirstStreet || knowsMascot ) {
         print("seems legit")
     }
+*/
 
+/*:
 
 ![Look](Look.png)
 > There are lots of ways to do the same thing.
@@ -194,6 +196,9 @@ var hasSunscreen = false
 var hasShades    = false
 
 // solve like in the isFreezing / wearingScarf example above (in Look)
+
+
+
 
 
 

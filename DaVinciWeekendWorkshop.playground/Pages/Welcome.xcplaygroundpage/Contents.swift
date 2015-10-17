@@ -15,5 +15,7 @@ The purpose of this document is to introduce novices to computer programming.  P
  * Freelance iOS Developer
  * Host of Boulder iOS Meetup Group
 
+17 Oct 2015
+
 [Next](@next)
 */
