@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='raw'>
+    <pages>
+        <page name='Welcome'/>
+        <page name='Introducing Swift'/>
+        <page name='0) Comments and Errors'/>
+        <page name='1) Variables and Constants'/>
+        <page name='2) Types and Functions'/>
+        <page name='3) Comparison Operations'/>
+        <page name='4) Logical Operations'/>
+        <page name='5) Loops and Ranges'/>
+        <page name='Review'/>
+        <page name='6) Optionals'/>
+        <page name='7) Objects'/>
+        <page name='8) Excercise!'/>
+        <page name='misc'/>
+    </pages>
+</playground>
