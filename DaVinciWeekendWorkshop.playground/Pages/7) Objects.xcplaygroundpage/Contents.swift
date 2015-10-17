@@ -202,7 +202,7 @@ if circleOne.radius != circleTwo.radius {
 }
 
 for ii in 1..<100 {
-    let circle = SomeCircle(radiusIn:Double(ii))
+    let circle = SomeCircle(withRadius: Double(ii))
     /* CMD + OPT + ENTER */
     XCPCaptureValue("Area", value: circle.area())
 }
@@ -210,7 +210,7 @@ for ii in 1..<100 {
 
 /*:
 ![Fix](Fix.png)
-> 
+> Fix up our Rectangle class.
 */
 
 /*  /** UNCOMMENT **/

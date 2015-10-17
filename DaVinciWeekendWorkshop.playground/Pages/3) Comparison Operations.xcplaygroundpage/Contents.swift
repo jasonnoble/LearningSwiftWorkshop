@@ -34,7 +34,7 @@ Hmmmmm.  That doesn't seem quite right.  Maybe `if / elseif` is the way to go.
         print("Shorts time!")
     }
 
-## ! Not Operator
+#### ! Not Operator
 * You can "reverse" or "flip" a boolean expression with `!`
 * `!true` is `false`
 
@@ -52,27 +52,27 @@ The **comparisons** above are what makes this possible.  The comparisons are `ai
 
 These are all the comparison operators and each returns a `Bool` value.
 
-## == Equals
+#### == Equals
 * Are two expressions the same?
 * 1 = 1
 
-## != Not Equals
+#### != Not Equals
 * Are two expressions not the same?
 * 1 != 2
 
-## < Less Than
+#### < Less Than
 * Is the first expression smaller than the second?
 * 1 < 2
 
-## > Greater Than
+#### > Greater Than
 * Is the first expression larger than the second?
 * 2 > 1
 
-## <= Less Than or Equal To
+#### <= Less Than or Equal To
 * Is the first expression smaller or the same as the second?
 * 1 <= 1
 
-## >= Greater Than or Equal To
+#### >= Greater Than or Equal To
 * Is the first expression larger or the same as the second?
 * 1 >= 1
 

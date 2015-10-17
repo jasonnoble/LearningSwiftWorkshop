@@ -125,8 +125,6 @@ if let url:NSURL = NSURL(string: address),
 > Here we create a view, and check it's background color.
 >
 > UIColor backgroundColor returns a `UIColor?`
->
-
 */
 
 let myFrame = CGRect(x: 0, y: 0, width: 50, height: 50)

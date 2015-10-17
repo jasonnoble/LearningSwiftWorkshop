@@ -1,6 +1,14 @@
 /*:
 [Previous](@previous)
 
+# "Real" playground
+Our last activity today will be to complete an iOS app, [Rocket App](https://github.com/hollarab/LearningSwiftRocketApp).
+
+But first, lets look at the logic and method we will need.
+
+Press `CMD + OPT + Enter` to show the Assitant Editor
+
+Read the code below, and uncomment the last line to make it run.
 
 */
 
@@ -16,7 +24,7 @@ class RocketHelper:NSObject {
     var timer:NSTimer?           // creates our run loop
     var distance:Float = 0.0     // distance travelled
     
-    let distancePerTick:Float = 10 // how far it moves each tick
+    let distancePerTick:Float = 2 // how far it moves each tick
     
     var parent:UIView?
     var child:UIView?
@@ -32,10 +40,9 @@ class RocketHelper:NSObject {
         parent?.addSubview(child!)
     }
     
-    
-    /** BELOW here is code you can play with and move
-    to the Rocket App */
-    
+/*:
+    The rest of the class can be used to play with and move to the Rocket App 
+*/
     
     func startTimer() {
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerFired", userInfo: nil, repeats: true)
@@ -50,17 +57,12 @@ class RocketHelper:NSObject {
         distance += distancePerTick
         print(distance)
         
-        /** TODO:
-        when square is at bottom, you'll have to update this */
-        
         var frame = child!.frame
         frame.origin.x += CGFloat(distancePerTick)
         frame.origin.y += CGFloat(distancePerTick)
         child!.frame = frame
         
-        /** TODO:
-        make the square reset when it goes off the screen
-        */
+        /** Can you make the square reset when it goes off the screen? */
     }
 }
 
@@ -71,5 +73,5 @@ let helper = RocketHelper()
 XCPShowView("Window", view: helper.parent!)
 
 /** Uncomment NEXT line to let the playground run */
-//helper.startTimer()
+helper.startTimer()
 
