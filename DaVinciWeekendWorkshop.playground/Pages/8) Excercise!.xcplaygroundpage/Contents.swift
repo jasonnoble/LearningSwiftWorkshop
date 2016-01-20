@@ -16,9 +16,9 @@ import XCPlayground
 import UIKit
 import Foundation
 
+// Why imported twice?
 import Foundation
 import UIKit
-
 
 class RocketHelper:NSObject {
     var timer:NSTimer?           // creates our run loop
@@ -28,6 +28,7 @@ class RocketHelper:NSObject {
     
     var parent:UIView?
     var child:UIView?
+      var child2:UIView?
     
     override init() {
         /** TODO:
@@ -35,9 +36,13 @@ class RocketHelper:NSObject {
         
         parent = UIView(frame: CGRectMake(0, 0, 100, 200))
         parent?.backgroundColor = UIColor.redColor()
-        child = UIView(frame: CGRectMake(0, 0, 50, 50))
+        child = UIView(frame: CGRectMake(0, 150, 50, 50))
         child?.backgroundColor = UIColor.blueColor()
         parent?.addSubview(child!)
+
+      child2 = UIView(frame: CGRectMake(50, 150, 50, 50))
+      child2?.backgroundColor = UIColor.greenColor()
+      parent?.addSubview(child2!)
     }
     
 /*:
@@ -45,7 +50,7 @@ class RocketHelper:NSObject {
 */
     
     func startTimer() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerFired", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "timerFired", userInfo: nil, repeats: true)
     }
     
     func stopTimer() {
@@ -58,10 +63,22 @@ class RocketHelper:NSObject {
         print(distance)
         
         var frame = child!.frame
-        frame.origin.x += CGFloat(distancePerTick)
-        frame.origin.y += CGFloat(distancePerTick)
+//        frame.origin.x -= CGFloat(distancePerTick)
+        frame.origin.y -= CGFloat(distancePerTick)
+      if frame.origin.y < -50 {
+        frame.origin.y = 150
+      }
         child!.frame = frame
-        
+
+      var frame2 = child2!.frame
+      //        frame.origin.x -= CGFloat(distancePerTick)
+      frame2.origin.y -= CGFloat(distancePerTick) * 2
+      if frame2.origin.y < -50 {
+        frame2.origin.y = 150
+      }
+
+      child2!.frame = frame2
+
         /** Can you make the square reset when it goes off the screen? */
     }
 }

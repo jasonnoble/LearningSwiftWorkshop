@@ -161,17 +161,15 @@ Your *coding style* should be clean and easy to read.  Pick good names, and make
 > Without changing the print statements, fix the slew of errors below.
 */
 
-/*  /** UNCOMMENT **/
-
 let currentTemp = 900
-let isRunning   = true
+let isRunning   = false
 var maxTemp     = 1200
 var minTemp     = 400
 
 if !isRunning {
     if (currentTemp < maxTemp) && (currentTemp > minTemp) {
         print("normal operating conditions")
-    } else if currentTemp !> minTemp {
+    } else if currentTemp < minTemp {
         print("running to cold.  remove water.")
     } else {
         print("runing too hot.  add water.")
@@ -179,9 +177,6 @@ if !isRunning {
 } else {
     print("Call Maintenance!")
 }
-
-*/  /** UNCOMMENT **/
-
 
 /*:
 ![Write](Write.png)
@@ -191,13 +186,25 @@ if !isRunning {
 
 */
 
-var hasTowel     = false          // NOTE: you should always know where your towel is
-var hasSunscreen = false
-var hasShades    = false
+var hasTowel     = !false          // NOTE: you should always know where your towel is
+var hasSunscreen = !false
+var hasShades    = !false
 
 // solve like in the isFreezing / wearingScarf example above (in Look)
 
-
+if hasTowel {
+  if hasSunscreen {
+    if hasShades {
+      print("Good to go!")
+    } else {
+      print("You have a towel and sunscreen, do you like squinting?")
+    }
+  } else {
+    print("You grabbed a towel, maybe some sunscreen would be a good idea?")
+  }
+} else {
+  print("Don't forget to bring a towel!")
+}
 
 
 

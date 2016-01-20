@@ -207,7 +207,8 @@ if circleOne.radius != circleTwo.radius {
 for ii in 1..<100 {
     let circle = SomeCircle(withRadius: Double(ii))
     /* CMD + OPT + ENTER */
-    XCPCaptureValue("Area", value: circle.area())
+//    XCPCaptureValue("Area", value: circle.area())
+          XCPlaygroundPage.currentPage.captureValue(circle.area(), withIdentifier: "Area")
 }
 
 
@@ -216,35 +217,31 @@ for ii in 1..<100 {
 > Fix up our Rectangle class.
 */
 
-/*  /** UNCOMMENT **/
+class SomeRectangle {
+  var lengthSize:Double
+  var widthSize:Double
 
-class SomeRectangle
-    var lengthSize
-    var widthSize
-    
     init(length:Double, width:Double) {
         lengthSize = length
         widthSize = width
     }
     
     func area() -> Double {
-        return lengthSize + widthSize
+        return lengthSize * widthSize
     }
     
     func perimeter() -> Double {
-        return lengthSize + (2 * width)
+        return 2.0 * lengthSize + (2.0 * widthSize)
     }
 }
 
 let smallRec = SomeRectangle(length: 1.5, width: 3.0)
-smallRec.area
+smallRec.area()
 smallRec.perimeter()
 
-let largeRec = SomeRectangle(12.5, 39.1)
+let largeRec = SomeRectangle(length: 12.5, width: 39.1)
 largeRec.area()
 largeRec.perimeter()
-
-*/  /** UNCOMMENT **/
 
 
 /*:
@@ -253,7 +250,30 @@ largeRec.perimeter()
 >
 > It should have functions to return area() and perimeter() like our other shapes
 */
+class SomeSquare {
+  var widthSize:Int
 
+  init(width:Int) {
+    widthSize = width
+  }
+
+  func area() -> Int {
+    return widthSize * widthSize
+  }
+
+  func perimeter() -> Int {
+    return widthSize * 4
+  }
+}
+
+let smallSquare = SomeSquare(width: 5)
+smallSquare.area()
+smallSquare.perimeter()
+
+
+let largeSquare = SomeSquare(width: 15)
+largeSquare.area()
+largeSquare.perimeter()
 
 
 

@@ -59,18 +59,17 @@ let total = fruitCount + sodaCount + eggCount
 > These are a bit contrived and lack context because we're just getting started, but take note of the sorts of things that *don't work* in Swift.
 */
 
-/*  /** UNCOMMENT **/
 let altitude = 1000
-altitude = 999
+//altitude = 999
 
-var speed = 1000mph
+var speed = "1000mph"
 
-let 1 = 1
+let foo = 1
 
-ver something = 7
+var something = 7
 
-var anotherThing
-*/  /** UNCOMMENT **/
+var anotherThing = 5
+
 
 
 /*:
@@ -82,11 +81,16 @@ var anotherThing
 > 3. I have 7 pizzas with 8 slices each.  How many slices do each of my 5 friends get?
 */
 
+let minutes_per_hour = 60
+let hours_per_day = 24
+let days_per_week = 7
+let days_per_year = 365
 
+// 1. How many minutes in a week?
+let minutes_per_week = minutes_per_hour * hours_per_day * days_per_week
 
-
-
-
+// 2. If you are 38 and 1/2 years old, how many days old are you?
+let days_old = 38.5 * Double(days_per_year)
 
 /*:
 

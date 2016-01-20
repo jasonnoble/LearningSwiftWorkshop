@@ -175,29 +175,21 @@ print(result)
 */
 
 
-/*  /** UNCOMMENT 1st **/
-
 // these are all snippets that should be valid
-var aNumber:int = 1
+var aNumber:Int = 1
 
-var aBool:Bool = 0
+var aBool:Bool = true
 
-func addTwoFloat(floatOne, floatTwo) -> Float {
+func addTwoFloat(floatOne:Float, floatTwo:Float) -> Float {
     return floatOne + floatTwo
 }
 
-*/  /** UNCOMMENT 1st **/
-
-
-/*  /** UNCOMMENT 2nd **/
-
 func addTwoInt(intOne:Int, intTwo:Int) -> Int {
-    return floatOne + floatOne
+    return intOne + intOne
 }
 
-addTwoInt(550, intTwo: 11.0)
-
-*/  /** UNCOMMENT 2nd **/
+addTwoInt(550, intTwo: 11)
+addTwoFloat(550.25, floatTwo: 11.5)
 
 
 /*:
@@ -209,7 +201,23 @@ addTwoInt(550, intTwo: 11.0)
 > 3. Write a function that takes `firstName` and `lastName`, returns nothing, but prints a message using *both arguments*.
 */
 
+func weeksToMinutes(weeks:Int) -> Int {
+  return weeks * 7 * 24 * 60
+}
 
+weeksToMinutes(1)
+
+func yearsToDays(years:Float) -> Float {
+  return years * 365.25
+}
+
+yearsToDays(20)
+
+func fullName(firstName:String, lastName:String) {
+  print(firstName + " " + lastName)
+}
+
+fullName("Jason", lastName: "Noble")
 
 
 

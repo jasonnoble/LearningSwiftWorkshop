@@ -114,6 +114,7 @@ if let url:NSURL = NSURL(string: address),
         
         /** Uncomment this, and press CMD + OPT + ENTER to see full size image **/
 //        XCPCaptureValue("hang in there", value:anotherView)
+              XCPlaygroundPage.currentPage.captureValue(anotherView, withIdentifier: "hang in there")
 }
 
 
@@ -136,10 +137,10 @@ if let color = backColor {
     print("no color is set")
 }
 
-someView.backgroundColor = UIColor.redColor()
+//someView.backgroundColor = UIColor.redColor()
 //someView.backgroundColor = UIColor.purpleColor()
 //someView.backgroundColor = UIColor.blueColor()
-//someView.backgroundColor = UIColor.greenColor()
+someView.backgroundColor = UIColor.greenColor()
 
 backColor = someView.backgroundColor
 
@@ -157,20 +158,18 @@ if let color = backColor {
 > It is helpful to see what the errors look like, and how to fix them.
 */
 
-/*  /** UNCOMMENT **/
-var aString:String = "howdy!"
+var aString:String? = "howdy!"
 aString = nil
 
-if let str == aString {
-    print("\(str) defined)
+if let str = aString {
+    print("\(str) defined")
 }
 
-var intVal:Int = Int("this")
+var intVal:Int? = Int("this")
 
-var fail:Double? = nil
+var fail:Double? = Double("25.2")
 print(fail!)
 
-*/  /** UNCOMMENT **/
 
 /*:
 Skipping Write this time.

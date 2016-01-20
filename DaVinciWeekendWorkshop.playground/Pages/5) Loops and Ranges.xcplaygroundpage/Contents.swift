@@ -69,10 +69,13 @@ var start = 1
 var end   = 4
 for ii in start...end {
     print("\(ii) squared is \(ii * ii)")
-    XCPCaptureValue("value", value: ii)
+    XCPlaygroundPage.currentPage.captureValue(ii, withIdentifier: "value")
+    XCPlaygroundPage.currentPage.captureValue(ii*ii*ii*ii, withIdentifier: "value squared")
+
 
 //    After you see the timeline, uncomment this next line
 //    XCPCaptureValue("log", value: sin(Double(ii)))
+  XCPlaygroundPage.currentPage.captureValue(sin(Double(ii)), withIdentifier: "log")
 }
 
 /*:
@@ -103,6 +106,8 @@ You can put loops inside of loops, too.  This is called a **nested loop**.
 
 Find the output of this code in the *Timeline* and the *Console Output*.
 */
+// To Show the Assistant Editor: Cmnd-Option-Enter
+// To Hide the Assistant Editor: Cmnd-Enter
 
 print("**********************")
 
@@ -113,8 +118,10 @@ for ii in 1...outerMax {
     for jj in 1...innerMax {
         print("\(ii) * \(jj) = \(ii * ii)")
 //        XCPCaptureValue("outerMax", value: ii)
+        XCPlaygroundPage.currentPage.captureValue(ii, withIdentifier: "outerMax")
 //        XCPCaptureValue("innerMax", value: jj)
-    }
+        XCPlaygroundPage.currentPage.captureValue(jj, withIdentifier: "innerMax")
+  }
 }
 
 /*:
@@ -150,20 +157,18 @@ print("\(value)! is \(factor)")
 > We have only used the `print(string)` function so far, but it can do more.  `print(String, terminator:"")` command is very similar, but it doesn't start a new line.  So `print(string)` prints a string to the console, then presses *return* (basically).  `print(string, terminator:"")` prints to the console, then DOES NOT press *return*.  Calling `print("")` (with and empty string) is just like pressing *return*.
 */
 
-/*  /** UNCOMMENT **/
 print("===============")
 
 var numberOfRows = 10
 
-for ii in numberOfrows...1 {
+for ii in 1...numberOfRows {
     var str = ""
-    for jj in 1..ii {
+    for jj in 1...ii {
         print("*", terminator:"")
     }
     print("")
 }
 
-*/  /** UNCOMMENT **/
 
 
 /*:
@@ -186,7 +191,13 @@ func isOdd(value:Int) -> Bool {
     return value % 2 == 1
 }
 
-// write loop here
+for currentNumber in startingNumber...endingNumber {
+  if isOdd(currentNumber) {
+    oddSum += currentNumber
+  } else {
+    evenSum += currentNumber
+  }
+}
 
 evenSum
 oddSum

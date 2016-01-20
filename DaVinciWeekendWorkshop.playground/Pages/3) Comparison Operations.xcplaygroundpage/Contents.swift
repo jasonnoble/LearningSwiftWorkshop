@@ -104,13 +104,13 @@ func clothingAdviceForTemp(temp:Int) -> String {
     }
 }
 
-clothingAdviceForTemp(125)
+clothingAdviceForTemp(30)
 /* 1. change this value */
 
 
 
 /* 2. change this value */
-var doILikeRed = true
+var doILikeRed = false
 
 if doILikeRed == true {
     print("I like red!")
@@ -141,7 +141,7 @@ func doThis(a:Bool, b:Bool, c:Bool, d:Int, e:Float) {
     }
 }
 
-doThis(true, b: false, c: false, d: 23, e: 23.0)
+doThis(true, b: true, c: true, d: 23, e: 23.0)
 
 
 /*:
@@ -178,52 +178,42 @@ Be warry of too many nested if statements - they can make code very hard to read
 */
 
 
-/*      /** UNCOMMENT 1 **/
-var willPrintOut = false
+var willPrintOut = true
 
 if willPrintOut {
-    print "make this print"
+    print("make this print")
 }
-*/      /** UNCOMMENT 1**/
 
 
-/*      /** UNCOMMENT 2 **/
-var willNotPrint = false
+var willNotPrint = true
 
 if willNotPrint != true {
     print("don't print this. print nothing here.")
 }
-*/      /** UNCOMMENT 2 **/
 
-
-/*      /** UNCOMMENT 3 **/
 var valueOne = false
-var valueTwo = false
+var valueTwo = true
 
 if valueOne {
-    println("nope - don't print this")
+    print("nope - don't print this")
 } else if valueTwo {
     print("not me either")
 } else {
     print("this should print")
 }
-*/      /** UNCOMMENT 3 **/
 
-
-/*      /** UNCOMMENT 4 **/
-var valueThree = false
-var valueFour = false
+var valueThree = true
+var valueFour = !false
 
 if valueThree {
-if( valueFour {
-print("print this nested guy")
+  if valueFour {
+    print("print this nested guy")
+  } else {
+    print("not this dude")
+  }
 } else {
-print("not this dude")
+  print("this is right out")
 }
-} else {
-print)"this is right out")
-}
-*/      /** UNCOMMENT 4 **/
 
 
 /*:
@@ -246,12 +236,20 @@ print)"this is right out")
 > Write a function with if/then/else statements to tell me if I can drive home based on how much beer I've had, and how long I've waited.
 */
 
-var beerCount = 7
+var beerCount = 1
 var hoursSinceLastBeer = 2
 
 // write code here.
 
-
+if beerCount > 3 {
+  print("NO")
+} else {
+  if hoursSinceLastBeer < beerCount {
+    print("NO")
+  } else {
+    print("Yes")
+  }
+}
 
 
 

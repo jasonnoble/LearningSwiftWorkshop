@@ -62,7 +62,7 @@ It can go on forever
   This is the ONE TIME you want to see errors in Xcode: when you're learning what they look like.
 */
 
-3 x 10
+// 3 x 11
 
 /*:
 
@@ -81,17 +81,16 @@ Before we continue, let's talk about errors - they break stuff.  You need to fix
 > 3. Observe output - just because it runs, is it right?
 */
 
-/*  /** UNCOMMENT **/
-21.5.2 * 12
 
-10 / 0
+21.5 * 12
+
+//10 / 0
 
 1 + 1 + 1 +
 
-21.5.2 * 12
+21.52 * 12
 
-pi * 10
-*/  /** UNCOMMENT **/
+//pi * 10
 
 /*:
 ![Write](Write.png)
@@ -102,9 +101,15 @@ pi * 10
 > 3. I have 7 pizzas with 8 slices each.  How many slices do each of my 5 friends get?
 */
 
+// 60 minutes per hour
+// 24 hours per day
+// 7 days per week
+7 * 24 * 60
 
+// 365 days per year
+38.5 * 365.25 * 24 * 60
 
-
+7 * 8 / 5
 
 
 
