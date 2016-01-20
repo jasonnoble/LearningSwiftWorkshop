@@ -70,7 +70,7 @@ class RocketHelper:NSObject {
 let helper = RocketHelper()
 
 // Show the parent view so we can see things move
-XCPShowView("Window", view: helper.parent!)
+XCPlaygroundPage.currentPage.liveView = helper.parent!
 
 /** Uncomment NEXT line to let the playground run */
 helper.startTimer()
