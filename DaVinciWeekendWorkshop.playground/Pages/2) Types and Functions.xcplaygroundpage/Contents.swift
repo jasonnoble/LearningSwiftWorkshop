@@ -185,12 +185,11 @@ func addTwoFloat(floatOne:Float, floatTwo:Float) -> Float {
 }
 
 func addTwoInt(intOne:Int, intTwo:Int) -> Int {
-    return intOne + intOne
+    return intOne + intTwo
 }
 
 addTwoInt(550, intTwo: 11)
 addTwoFloat(550.25, floatTwo: 11.5)
-
 
 /*:
 ![Write](Write.png)
