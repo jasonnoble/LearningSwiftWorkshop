@@ -59,10 +59,10 @@ let total = fruitCount + sodaCount + eggCount
 > These are a bit contrived and lack context because we're just getting started, but take note of the sorts of things that *don't work* in Swift.
 */
 
-let altitude = 1000
-//altitude = 999
+var altitude = 1000
+altitude = 999
 
-var speed = "1000mph"
+var speed = 1000
 
 let foo = 1
 
@@ -81,17 +81,23 @@ var anotherThing = 5
 > 3. I have 7 pizzas with 8 slices each.  How many slices do each of my 5 friends get?
 */
 
-let minutes_per_hour = 60
-let hours_per_day = 24
-let days_per_week = 7
-let days_per_year = 365
+let minutesPerHour = 60
+let hoursPerDay = 24
+let daysPerWeek = 7
+let daysPerYear:Double = 365
 
 // 1. How many minutes in a week?
-let minutes_per_week = minutes_per_hour * hours_per_day * days_per_week
+let minutesPerWeek = minutesPerHour * hoursPerDay * daysPerWeek
 
 // 2. If you are 38 and 1/2 years old, how many days old are you?
-let days_old = 38.5 * Double(days_per_year)
+//let daysOld = 38.5 * Double(daysPerYear)
+let daysOld = 38.5 * daysPerYear
 
+// 3. I have 7 pizzas with 8 slices each. How many slices do each of my 5 friends get?
+let pizzas = 7
+let slicesPerPie = 8
+let friends = 5
+let slicesPerFriend = (pizzas * slicesPerPie) / friends
 /*:
 
 [Next](@next) we learn a lot more about what a variables and constants really are, and how we can use them. 
